@@ -4,10 +4,10 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import { devToolsEnhancer  } from 'redux-devtools-extension';
 import routes from './routes';
-import todoApp from './reducers';
+import automaxi from './reducers';
 import './global_styles/index.css';
 
-let store = createStore(todoApp, devToolsEnhancer());
+let store = createStore(automaxi, devToolsEnhancer());
 
 ReactDOM.render(
   <Provider store={store}>
