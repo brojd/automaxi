@@ -1,1 +1,1 @@
-export const getJumbotron = state => state.jumbotron;
+export const getIsLoading = state => state.main.isLoading;
