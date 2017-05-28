@@ -1,27 +1,30 @@
 import React, { Component } from 'react';
 import styles from './OuterJumbotron.stylesheet.css';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-function OuterJumbotron(WrappedComponent, images) {
+let currentImagesIndex = 0;
+
+function OuterJumbotron(WrappedComponent, images, timeout) {
   return class extends Component {
 
     constructor() {
       super();
       this.changeBackground = this.changeBackground.bind(this);
       this.state = {
-        currentImagesIndex: 0
+        currentImagesIndex
       };
     }
 
     changeBackground() {
+      const nextIndex = this.state.currentImagesIndex === (images.length - 1) ? 0 : this.state.currentImagesIndex + 1;
+      currentImagesIndex = nextIndex;
       this.setState({
-        currentImagesIndex: this.state.currentImagesIndex === (images.length - 1) ?
-          0
-          : this.state.currentImagesIndex + 1
+        currentImagesIndex: nextIndex
       })
     }
 
     componentDidMount() {
-      this.backgroundInterval = window.setInterval(this.changeBackground, 4000);
+      this.backgroundInterval = window.setInterval(this.changeBackground, timeout);
     }
 
     componentWillUnmount() {
@@ -31,11 +34,23 @@ function OuterJumbotron(WrappedComponent, images) {
     render() {
       const props = Object.assign({...this.props, textIndex: this.state.currentImagesIndex})
       return (
-        <div
-          alt="background-image"
-          className={styles.OuterJumbotron}
-          style={{'background': `url(${images[this.state.currentImagesIndex]}) center/cover fixed`}}
-        >
+        <div className={styles.OuterJumbotron}>
+          <ReactCSSTransitionGroup
+            transitionName={styles}
+            transitionEnterTimeout={timeout}
+            transitionLeaveTimeout={timeout}
+          >
+            {
+              images.map((image, index) =>
+                index === this.state.currentImagesIndex &&
+                <div
+                  key={image}
+                  style={{'background': `url(${images[this.state.currentImagesIndex]}) center/cover fixed`}}
+                  className={styles.image}
+                />
+              )
+            }
+          </ReactCSSTransitionGroup>
           <WrappedComponent {...props} />
         </div>
       )
