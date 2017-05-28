@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import styles from './BackgroundImage.stylesheet.css';
+import styles from './OuterJumbotron.stylesheet.css';
 
-function BackgroundImage(WrappedComponent, images) {
+function OuterJumbotron(WrappedComponent, images) {
   return class extends Component {
 
     constructor() {
@@ -29,17 +29,18 @@ function BackgroundImage(WrappedComponent, images) {
     }
 
     render() {
+      const props = Object.assign({...this.props, textIndex: this.state.currentImagesIndex})
       return (
         <div
           alt="background-image"
-          className={styles.BackgroundImage}
+          className={styles.OuterJumbotron}
           style={{'background': `url(${images[this.state.currentImagesIndex]}) center/cover fixed`}}
         >
-          <WrappedComponent {...this.props} />
+          <WrappedComponent {...props} />
         </div>
       )
     }
   }
 }
 
-export default BackgroundImage;
+export default OuterJumbotron;
