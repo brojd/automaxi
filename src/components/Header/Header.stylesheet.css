@@ -1,9 +1,11 @@
 .Header {
   height: 15vh;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  justify-content: space-between; }
 
 .logo {
-  height: 10vh; }
+  height: 10vh;
+  margin-left: 30px; }
 
 /*# sourceMappingURL=Header.stylesheet.css.map */
