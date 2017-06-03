@@ -1,14 +1,16 @@
-.Nav {}
+@import '../../global_styles/variables';
 
-.list {
-
+.Nav {
+  margin-right: $nav-margin-right;
 }
 
 .listItem {
   display: inline-block;
-  margin-right: 30px;
-  font-size: 18px;
+  font-size: $nav-font-size;
   padding: 5px 0;
+  &:not(:last-child) {
+    margin-right: $nav-elem-margin-right;
+  }
 }
 
 .listItem--active {

@@ -1,11 +1,14 @@
+@import '../../global_styles/_variables.scss';
+
 .Header {
-  height: 15vh;
+  height: $header-height;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
 .logo {
-  height: 10vh;
-  margin-left: 30px;
+  width: $logo-width;
+  height: auto;
+  margin-left: $logo-margin-left;
 }

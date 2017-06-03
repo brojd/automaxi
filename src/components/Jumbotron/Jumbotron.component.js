@@ -18,5 +18,4 @@ class Jumbotron extends Component {
   }
 }
 
-
 export default OuterJumbotron(Jumbotron, [jumbo1, jumbo2, jumbo3], 4200);

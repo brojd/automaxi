@@ -1,0 +1,12 @@
+/* GENERAL */
+$root-font-size: 16px;
+
+/* HEADER */
+$logo-width: 120px;
+$logo-margin-left: 30px;
+$header-height: 100px;
+$nav-margin-right: $logo-margin-left;
+$nav-elem-margin-right: $logo-margin-left;
+$nav-font-size: 1.2rem;
+$client-logos-section-height: $header-height - 20px;
+$client-logos-section-padding: 0 $logo-margin-left * 2;
