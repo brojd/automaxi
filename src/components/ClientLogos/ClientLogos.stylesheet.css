@@ -8,14 +8,15 @@
   position: relative; }
 
 .logo {
-  transform: translateX(450px);
-  margin-top: 5px; }
+  margin-top: 5px;
+  position: absolute;
+  left: 400px;
+  animation: moveLeft 14s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
 
-.enter.enterActive {
-  transform: translateX(-200px);
-  transition: transform 6000ms linear; }
-
-.leave, .leave.leaveActive {
-  visibility: hidden; }
+@keyframes moveLeft {
+  to {
+    left: -500px; } }
 
 /*# sourceMappingURL=ClientLogos.stylesheet.css.map */

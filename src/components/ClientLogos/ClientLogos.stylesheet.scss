@@ -9,15 +9,16 @@
 }
 
 .logo {
-  transform: translateX($client-logos-section-width + 50px);
   margin-top: $client-logo-margin-top;
+  position: absolute;
+  left: $client-logos-section-width;
+  animation: moveLeft 14s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 
-.enter.enterActive {
-  transform: translateX(-200px);
-  transition: transform 6000ms linear;
-}
-
-.leave, .leave.leaveActive {
-  visibility: hidden;
+@keyframes moveLeft {
+  to {
+    left: -$client-logos-section-width - 100px;
+  }
 }
