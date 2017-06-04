@@ -2,6 +2,22 @@
 
 .ClientLogos {
   height: $client-logos-section-height;
-  padding: $client-logos-section-padding;
   color: #b0b0b0;
+  width: $client-logos-section-width;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo {
+  transform: translateX($client-logos-section-width + 50px);
+  margin-top: $client-logo-margin-top;
+}
+
+.enter.enterActive {
+  transform: translateX(-200px);
+  transition: transform 6000ms linear;
+}
+
+.leave, .leave.leaveActive {
+  visibility: hidden;
 }
