@@ -16,6 +16,7 @@ const ClientLogos = ({ logoList, logoHeight }) =>
               width={'auto'}
               className={styles.logo}
               style={{ animationDelay: `${index * 2.4}s` }}
+              key={index}
             />
         )
       }
