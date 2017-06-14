@@ -19,12 +19,12 @@
 }
 .enter.enterActive {
   opacity: 1;
-  transition: opacity 1400ms;
+  transition: opacity 1000ms;
 }
 .leave {
   opacity: 1;
 }
 .leave.leaveActive {
   opacity: 0.01;
-  transition: opacity 1400ms;
+  transition: opacity 1000ms;
 }
