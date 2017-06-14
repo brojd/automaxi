@@ -5,6 +5,9 @@
   height: 100%; }
 
 .heading {
-  color: white; }
+  color: white;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 700; }
 
 /*# sourceMappingURL=Jumbotron.stylesheet.css.map */
