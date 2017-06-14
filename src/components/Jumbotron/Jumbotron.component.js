@@ -18,9 +18,13 @@ class Jumbotron extends Component {
       <section
         className={styles.Jumbotron}
       >
-        <span className={styles.heading}>
-          {this.props.jumbotron.headings[this.props.textIndex]}
-        </span>
+        <div className={styles.headingWrapper}>
+          <span className={styles.heading}>
+            {this.props.jumbotron.headings[this.props.textIndex]}
+            <hr className={styles.underlining} />
+          </span>
+        </div>
+        <div className={styles.arrow}>↓</div>
       </section>
     )
   }

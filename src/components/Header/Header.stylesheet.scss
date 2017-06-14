@@ -1,6 +1,12 @@
 @import '../../global_styles/_variables.scss';
 
 .Header {
+  position: fixed;
+  width: 100%;
+  background: white;
+}
+
+.contentWrapper {
   height: $header-height;
   display: flex;
   align-items: center;

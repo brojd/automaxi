@@ -1,4 +1,8 @@
 .Jumbotron {
+  position: relative;
+  height: 100%; }
+
+.headingWrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,8 +10,24 @@
 
 .heading {
   color: white;
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 700; }
+  text-shadow: 2px 2px 3px #141414, -1px -1px #141414;
+  font-size: 3.1rem;
+  text-transform: uppercase; }
+
+.underlining {
+  border: 6px solid #fecc00;
+  width: 80px; }
+
+.arrow {
+  color: #fecc00;
+  font-weight: 800;
+  font-size: 4rem;
+  position: absolute;
+  bottom: 10vh;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20px; }
 
 /*# sourceMappingURL=Jumbotron.stylesheet.css.map */

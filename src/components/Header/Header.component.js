@@ -14,16 +14,18 @@ const logoList = [logo1, logo2, logo3, logo4, logo5, logo6]
 
 const Header = () =>
   <header className={styles.Header}>
-    <img
-      src={logo}
-      alt="logo"
-      className={styles.logo}
-    />
-    <ClientLogos
-      logoHeight={50}
-      logoList={logoList}
-    />
-    <Nav />
+    <div className={styles.contentWrapper}>
+      <img
+        src={logo}
+        alt="logo"
+        className={styles.logo}
+      />
+      <ClientLogos
+        logoHeight={50}
+        logoList={logoList}
+      />
+      <Nav />
+    </div>
   </header>;
 
 export default Header;
