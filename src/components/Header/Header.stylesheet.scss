@@ -1,3 +1,20 @@
+@import '../../global_styles/_variables.scss';
+
 .Header {
-  height: 15vh;
+  position: fixed;
+  width: 100%;
+  background: white;
+}
+
+.contentWrapper {
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: $logo-width;
+  height: auto;
+  margin-left: $logo-margin-left;
 }

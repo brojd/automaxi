@@ -1,0 +1,23 @@
+/* GENERAL */
+/* HEADER */
+/* JUMBOTRON */
+.ClientLogos {
+  height: 80px;
+  color: #b0b0b0;
+  width: 400px;
+  overflow: hidden;
+  position: relative; }
+
+.logo {
+  margin-top: 5px;
+  position: absolute;
+  left: 400px;
+  animation: moveLeft 14s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
+@keyframes moveLeft {
+  to {
+    left: -500px; } }
+
+/*# sourceMappingURL=ClientLogos.stylesheet.css.map */
