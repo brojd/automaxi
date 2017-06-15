@@ -1,4 +1,4 @@
-@import '../../global_styles/variables';
+@import '../../global_styles/mixins';
 
 .Jumbotron {
   position: relative;
@@ -15,13 +15,13 @@
 .heading {
   color: white;
   text-shadow: 2px 2px 3px #141414, -1px -1px #141414;
-  font-size: $jumbotron-heading-font-size;
-  text-transform: uppercase;
+  @include heading($jumbotron-heading-font-size);
 }
 
 .underlining {
-  border: 6px solid $jumbotron-heading-underlining-color;
+  border: 11px solid $jumbotron-heading-underlining-color;
   width: 80px;
+  border-bottom: none;
 }
 
 .arrowBack {

@@ -14,12 +14,16 @@
 .heading {
   color: white;
   text-shadow: 2px 2px 3px #141414, -1px -1px #141414;
+  margin-bottom: 3vh;
+  font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
+  font-weight: 200;
   font-size: 3.1rem;
   text-transform: uppercase; }
 
 .underlining {
-  border: 6px solid #fecc00;
-  width: 80px; }
+  border: 11px solid #fecc00;
+  width: 80px;
+  border-bottom: none; }
 
 .arrowBack {
   color: #fecc00;

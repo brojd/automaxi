@@ -1,7 +1,24 @@
 import React from 'react';
+import PropTypes from 'prop-types'
+import { connect } from 'react-redux';
+import { getServices } from '../../selectors/main';
 import styles from './Services.stylesheet.css';
+import ServicesIntro from '../ServicesIntro/ServicesIntro.component';
 
-const Services = () =>
-  <div className={styles.Services}>Services</div>
+const Services = ({ services }) =>
+  <section className={styles.Services}>
+    <ServicesIntro heading={services.heading} text={services.text} />
+    <div>detailed</div>
+  </section>
 
-export default Services;
+const mapStateToProps = state => {
+  return {
+    services: getServices(state)
+  }
+}
+
+Services.propTypes = {
+  services: PropTypes.object
+};
+
+export default connect(mapStateToProps)(Services);
