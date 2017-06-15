@@ -1,0 +1,18 @@
+@import '../../global_styles/variables';
+
+.Nav {
+  margin-right: $nav-margin-right;
+}
+
+.listItem {
+  display: inline-block;
+  font-size: $nav-font-size;
+  padding: 5px 0;
+  &:not(:last-child) {
+    margin-right: $nav-elem-margin-right;
+  }
+}
+
+.listItem--active {
+  border-bottom: 2px solid darkblue;
+}

@@ -1,0 +1,24 @@
+@import '../../global_styles/_variables.scss';
+
+.ClientLogos {
+  height: $client-logos-section-height;
+  color: #b0b0b0;
+  width: $client-logos-section-width;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo {
+  margin-top: $client-logo-margin-top;
+  position: absolute;
+  left: $client-logos-section-width;
+  animation: moveLeft 14s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes moveLeft {
+  to {
+    left: -$client-logos-section-width - 100px;
+  }
+}

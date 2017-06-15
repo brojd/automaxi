@@ -47,11 +47,13 @@ function OuterJumbotron(WrappedComponent, images, timeout) {
                   key={image}
                   style={{'background': `url(${images[this.state.currentImagesIndex]}) center/cover fixed`}}
                   className={styles.image}
-                />
+                >
+                  <div className={styles.secondBackground}></div>
+                  <WrappedComponent {...props} />
+                </div>
               )
             }
           </ReactCSSTransitionGroup>
-          <WrappedComponent {...props} />
         </div>
       )
     }
