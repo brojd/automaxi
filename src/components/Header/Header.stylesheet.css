@@ -1,4 +1,20 @@
+/* GENERAL */
+/* HEADER */
+/* JUMBOTRON */
 .Header {
-  height: 15vh; }
+  position: fixed;
+  width: 100%;
+  background: white; }
+
+.contentWrapper {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.logo {
+  width: 120px;
+  height: auto;
+  margin-left: 30px; }
 
 /*# sourceMappingURL=Header.stylesheet.css.map */

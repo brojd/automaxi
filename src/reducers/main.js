@@ -51,7 +51,7 @@ const main = (state = initialState, action) => {
     case TURN_OFF_LOADING:
       return Object.assign({ ...state, isLoading: false });
     case SET_MAIN_DATA:
-      return Object.assign({ ...state, data: action.payload });
+      return Object.assign({ ...state, textData: action.payload });
     default:
       return state;
   }
