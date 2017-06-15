@@ -1,5 +1,7 @@
 /* GENERAL */
 $root-font-size: 16px;
+$logo-primary-color: #1b398f;
+$logo-secondary-color: #fecc00;
 
 /* HEADER */
 $logo-width: 120px;
@@ -12,3 +14,8 @@ $client-logos-section-height: $header-height - 20px;
 $client-logos-section-width: 400px;
 $client-logos-section-padding: 0 $logo-margin-left * 2;
 $client-logo-margin-top: 5px;
+
+/* JUMBOTRON */
+$jumbotron-heading-underlining-color: $logo-secondary-color;
+$jumbotron-arrow-back-color: $logo-primary-color;
+$jumbotron-heading-font-size: 3.1rem;

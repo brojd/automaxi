@@ -1,3 +1,5 @@
+@import '../../global_styles/variables';
+
 .Jumbotron {
   position: relative;
   height: 100%;
@@ -13,24 +15,62 @@
 .heading {
   color: white;
   text-shadow: 2px 2px 3px #141414, -1px -1px #141414;
-  font-size: 3.1rem;
+  font-size: $jumbotron-heading-font-size;
   text-transform: uppercase;
 }
 
 .underlining {
-  border: 6px solid #fecc00;
+  border: 6px solid $jumbotron-heading-underlining-color;
   width: 80px;
 }
 
-.arrow {
-  color: #fecc00;
-  font-weight: 800;
-  font-size: 4rem;
+.arrowBack {
+  color: $jumbotron-heading-underlining-color;
   position: absolute;
-  bottom: 10vh;
+  bottom: 6vh;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: $jumbotron-arrow-back-color;
+  animation: bounce 5s infinite 2s;
+  transform-origin: center bottom;
+}
+
+.arrow {
+  position: absolute;
+  width: 45px;
+  top: -22px;
+  transform: rotate(-90deg);
+  font-family: Arial Narrow, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 5.5rem;
+}
+
+@keyframes bounce {
+  from, 5%, 13%, 20%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    transform: translate3d(0,0,0);
+  }
+
+  10%, 11% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  17% {
+    animation-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  22% {
+    transform: translate3d(0,-4px,0);
+  }
+
+  28% {
+    transform: translate3d(0,0,0);
+  }
 }

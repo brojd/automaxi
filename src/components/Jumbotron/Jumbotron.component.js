@@ -24,7 +24,9 @@ class Jumbotron extends Component {
             <hr className={styles.underlining} />
           </span>
         </div>
-        <div className={styles.arrow}>↓</div>
+        <div className={styles.arrowBack}>
+          <span className={styles.arrow}>&#8249;</span>
+        </div>
       </section>
     )
   }
