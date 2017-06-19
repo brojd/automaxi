@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ClientLogos.stylesheet.css';
 import { headerDict } from '../../static_data/dictionary';

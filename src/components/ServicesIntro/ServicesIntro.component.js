@@ -15,7 +15,7 @@ const ServicesIntro = ({ heading, text }) =>
   </div>
 
 ServicesIntro.propTypes = {
-  text: PropTypes.text
+  text: PropTypes.string
 };
 
 export default ServicesIntro;
