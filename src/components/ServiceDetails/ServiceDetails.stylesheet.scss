@@ -21,10 +21,17 @@
 }
 
 .underlining {
-  border: 11px solid $logo-primary-color;
   width: 80px;
-  border-bottom: none;
+  border: none;
   margin-bottom: 30px;
+}
+
+.underlining--primary-color {
+  border-bottom: 11px solid $logo-primary-color
+}
+
+.underlining--secondary-color {
+  border-bottom: 11px solid $logo-secondary-color
 }
 
 .text {

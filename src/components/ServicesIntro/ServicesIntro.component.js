@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import styles from './ServicesIntro.stylesheet.css';
-import background from './images/background.jpg';
+import background from '../../common_images/backgroundDark.jpg';
 
 const ServicesIntro = ({ heading, text }) =>
   <div className={styles.ServicesIntro}

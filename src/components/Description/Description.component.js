@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 import styles from './Description.stylesheet.css';
 import { getDescription } from '../../selectors/main';
-import background from './images/background.jpg';
+import background from '../../common_images/background.jpg';
 
 const Description = ({ description }) =>
   <section className={styles.Description}>

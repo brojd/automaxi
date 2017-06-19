@@ -22,10 +22,15 @@
   text-transform: uppercase; }
 
 .underlining {
-  border: 11px solid #1b398f;
   width: 80px;
-  border-bottom: none;
+  border: none;
   margin-bottom: 30px; }
+
+.underlining--primary-color {
+  border-bottom: 11px solid #1b398f; }
+
+.underlining--secondary-color {
+  border-bottom: 11px solid #fecc00; }
 
 .text {
   word-spacing: 1px;
