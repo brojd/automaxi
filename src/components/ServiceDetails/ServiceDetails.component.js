@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import styles from './ServiceDetails.stylesheet.css';
 import checkboxBlue from './images/checkbox.png';
 import checkboxRed from './images/checkboxRed.png';
-import background from '../../common_images/background.jpg';
-import backgroundDark from '../../common_images/backgroundDark.jpg';
+import background from '../../common_images/background2.jpg';
+import backgroundDark from '../../common_images/backgroundDark2.jpg';
 
 const ServiceDetails = props => {
   const mainImg =
