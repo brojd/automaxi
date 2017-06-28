@@ -6,8 +6,9 @@ import Description from '../Description/Description.component';
 import Services from '../Services/Services.component';
 import Contact from '../Contact/Contact.component';
 import background from '../../common_images/background2.jpg';
-import summaryBackground from './images/tires2.jpg';
+import tiresBackground from './images/tires.jpg';
 import { getDescription, getSummary } from '../../selectors/main';
+import styles from './MainPage.stylesheet.css';
 
 const MainPage = ({ description, summary }) =>
   <section>
@@ -18,13 +19,19 @@ const MainPage = ({ description, summary }) =>
       text={description.text}
     />
     <Services />
-    <Description
-      backgroundImg={summaryBackground}
-      heading={description.heading}
-      text={description.text}
-      isDark={true}
-    />
-    <Contact />
+    <div
+      className={styles.lastSectionsWrapper}
+      style={{ background: `url(${tiresBackground}) center center / cover fixed` }}
+    >
+      <div className={styles.descriptionBackground}></div>
+      <Description
+        heading={description.heading}
+        text={description.text}
+        isDark={true}
+      />
+      <div className={styles.contactBackground}></div>
+      <Contact />
+    </div>
   </section>
 
 const mapStateToProps = state => {

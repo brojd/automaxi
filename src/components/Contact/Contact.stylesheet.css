@@ -1,4 +1,34 @@
 .Contact {
-  height: 100vh; }
+  position: relative;
+  color: white;
+  padding: 0 10vw; }
+
+.contactInfoWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10vh 0; }
+
+.pictureMapWrapper {
+  padding: 5vh 0; }
+
+.buildingPhoto {
+  width: 40%;
+  height: auto;
+  border-radius: 3px;
+  border: 1px solid #717171;
+  display: inline-block; }
+
+.map {
+  width: 40%;
+  height: auto;
+  border-radius: 3px;
+  border: 1px solid #717171;
+  display: inline-block;
+  float: right; }
+
+.contactInfo {
+  text-align: center; }
+  .contactInfo h3, .contactInfo p:not(:last-child) {
+    margin-bottom: 12px; }
 
 /*# sourceMappingURL=Contact.stylesheet.css.map */
