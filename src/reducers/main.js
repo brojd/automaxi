@@ -32,6 +32,11 @@ const initialState = {
         text: '',
         list: []
       },
+      services3: {
+        heading: '',
+        text: '',
+        list: []
+      },
     },
     contact: {
       openingHours: [],
@@ -81,7 +86,16 @@ export const getMainData = () => {
             heading: data.data.fields.services2Heading,
             text: data.data.fields.services2Text,
             list: data.data.fields.services2List
+          },
+          services3: {
+            heading: data.data.fields.services3Heading,
+            text: data.data.fields.services3Text,
+            list: data.data.fields.services3List
           }
+        },
+        summary: {
+          heading: data.data.fields.summaryHeading,
+          text: data.data.fields.summaryText
         },
         contact: {
           phoneNumbers: data.data.fields.phoneNumbers,

@@ -1,0 +1,14 @@
+@import './variables';
+
+@mixin text() {
+  word-spacing: 1px;
+  line-height: 1.3rem;
+}
+
+@mixin heading($font-size) {
+  margin-bottom: 3vh;
+  font-family: $heading-font-family;
+  font-weight: 200;
+  font-size: $font-size;
+  text-transform: uppercase;
+}
