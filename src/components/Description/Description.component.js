@@ -1,30 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux';
 import styles from './Description.stylesheet.css';
-import { getDescription } from '../../selectors/main';
-import background from '../../common_images/background.jpg';
 
-const Description = ({ description }) =>
-  <section className={styles.Description}>
+const Description = ({ backgroundImg, heading, text, isDark }) =>
+  <div className={`${styles.Description} ${styles[isDark ? 'color-white' : 'color-dark']}`}>
     <div className={styles.background}
-         style={{ background: `url(${background}) center/cover fixed` }}
+         style={{ background: `url(${backgroundImg}) center/cover fixed` }}
     />
     <div className={styles.contentWrapper}>
-      <h3 className={styles.heading}>{description.heading}</h3>
-      <hr className={styles.underlining} />
-      <div className={styles.text}>{description.text}</div>
+      <h3 className={`${styles.heading} ${styles[isDark ? 'color-white' : 'color-dark']}`}>{heading}</h3>
+      <hr className={`${styles.underlining} ${styles[isDark ? 'underlining-yellow' : 'underlining-blue']}`} />
+      <div className={styles.text}>{text}</div>
     </div>
-  </section>
-
-const mapStateToProps = state => {
-  return {
-    description: getDescription(state)
-  }
-}
+  </div>
 
 Description.propTypes = {
-  description: PropTypes.object
+  backgroundImg: PropTypes.string,
+  heading: PropTypes.string,
+  text: PropTypes.string
 };
 
-export default connect(mapStateToProps)(Description);
+export default Description;
