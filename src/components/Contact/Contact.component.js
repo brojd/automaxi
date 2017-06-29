@@ -1,9 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import GoogleMapReact from 'google-map-react';
 import { connect } from 'react-redux';
 import { getContact } from '../../selectors/main';
 import styles from './Contact.stylesheet.css';
 import building from './images/building.jpg';
+import marker from './images/marker.png';
+
+const GoogleMarker = () =>
+  <img
+    src={marker}
+    alt="map-marker"
+    className={styles.googleMarker}
+  />
 
 const Contact = ({ contact }) =>
   <section className={styles.Contact}>
@@ -26,12 +35,27 @@ const Contact = ({ contact }) =>
       </div>
     </div>
     <div className={styles.pictureMapWrapper}>
+      <div className={styles.map}>
+        <GoogleMapReact
+          defaultCenter={{ lat: 51.1483784, lng: 17.0298001 }}
+          defaultZoom={13}
+        >
+          <GoogleMarker
+            lat={51.151555}
+            lng={17.0298001}
+          />
+        </GoogleMapReact>
+      </div>
       <img
         src={building}
         alt="warsztat"
         className={styles.buildingPhoto}
       />
-      <div className={styles.map}>map</div>
+      <div className={styles.icons}>
+        <i className="fa fa-facebook" aria-hidden="true"></i>
+        <i className="fa fa-google-plus" aria-hidden="true"></i>
+        <i className="fa fa-twitter" aria-hidden="true"></i>
+      </div>
     </div>
   </section>
 

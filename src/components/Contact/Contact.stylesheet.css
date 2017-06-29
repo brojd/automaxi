@@ -1,34 +1,55 @@
 .Contact {
   position: relative;
   color: white;
-  padding: 0 10vw; }
+  padding: 0 8vw; }
 
 .contactInfoWrapper {
   display: flex;
   justify-content: space-between;
-  padding: 10vh 0; }
+  padding: 5vh 0; }
 
 .pictureMapWrapper {
   padding: 5vh 0; }
 
 .buildingPhoto {
-  width: 40%;
-  height: auto;
-  border-radius: 3px;
-  border: 1px solid #717171;
-  display: inline-block; }
-
-.map {
-  width: 40%;
-  height: auto;
+  width: 31vw;
+  height: 23vw;
   border-radius: 3px;
   border: 1px solid #717171;
   display: inline-block;
   float: right; }
 
+.map {
+  width: 31vw;
+  height: 23vw;
+  border-radius: 3px;
+  border: 1px solid #717171;
+  display: inline-block; }
+
+.googleMarker {
+  width: 80px;
+  height: auto;
+  border-radius: 20px; }
+
 .contactInfo {
   text-align: center; }
   .contactInfo h3, .contactInfo p:not(:last-child) {
     margin-bottom: 12px; }
+
+.icons {
+  display: flex;
+  margin: 10vh auto 0 auto;
+  width: 200px;
+  justify-content: space-around; }
+  .icons i {
+    border: 2px solid #fff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+    text-align: center;
+    line-height: 35px; }
+    .icons i:before {
+      font-size: 20px; }
 
 /*# sourceMappingURL=Contact.stylesheet.css.map */
