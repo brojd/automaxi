@@ -50,6 +50,10 @@
     text-align: center;
     line-height: 35px; }
     .icons i:before {
-      font-size: 20px; }
+      font-size: 15px; }
+    .icons i:hover {
+      cursor: pointer;
+      color: #969696;
+      border-color: #969696; }
 
 /*# sourceMappingURL=Contact.stylesheet.css.map */

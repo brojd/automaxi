@@ -1,17 +1,36 @@
 import React from 'react';
 import styles from './Nav.stylesheet.css';
 import { headerDict } from '../../static_data/dictionary';
+import { animateScroll } from 'react-scroll';
 
 const navDict = headerDict.nav
 
 const Nav = () =>
   <nav className={styles.Nav}>
-    <ul className={styles.list}>
-      <li className={`${styles.listItem} ${styles['listItem--active']}`}>{navDict.start}</li>
-      <li className={styles.listItem}>{navDict.about}</li>
-      <li className={styles.listItem}>{navDict.offer}</li>
-      <li className={styles.listItem}>{navDict.contact}</li>
-    </ul>
+    <a
+      onClick={() => animateScroll.scrollToTop()}
+      className={styles.listItem}
+    >
+      {navDict.start}
+    </a>
+    <a
+      onClick={() => animateScroll.scrollTo(660)}
+      className={styles.listItem}
+    >
+      {navDict.about}
+    </a>
+    <a
+      onClick={() => animateScroll.scrollTo(1325)}
+      className={styles.listItem}
+    >
+      {navDict.offer}
+    </a>
+    <a
+      onClick={() => animateScroll.scrollToBottom()}
+      className={styles.listItem}
+    >
+      {navDict.contact}
+    </a>
   </nav>
 
 export default Nav;
