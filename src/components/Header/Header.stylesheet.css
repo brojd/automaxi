@@ -7,15 +7,57 @@
   background: white;
   z-index: 5; }
 
+.arrow {
+  position: absolute;
+  width: 35px;
+  height: 48px;
+  line-height: 30px;
+  text-align: center;
+  top: 94px;
+  color: #fecc00;
+  right: 21px;
+  background: #1b398f;
+  font-family: Arial Narrow, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 5.5rem;
+  cursor: pointer;
+  border: 1px solid #fff;
+  box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.42);
+  z-index: 5; }
+  .arrow--down {
+    transform: rotate(-90deg); }
+  .arrow--up {
+    transform: rotate(90deg); }
+
 .contentWrapper {
   height: 100px;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  z-index: 6; }
 
 .logo {
   width: 120px;
   height: auto;
   margin-left: 30px; }
+
+.hideHeader {
+  animation: moveUp 2s;
+  animation-fill-mode: forwards; }
+
+.showHeader {
+  animation: moveDown 1.5s;
+  animation-fill-mode: forwards; }
+
+@keyframes moveDown {
+  from {
+    top: -105px; }
+  to {
+    top: 0; } }
+@keyframes moveUp {
+  from {
+    top: 0; }
+  to {
+    top: -105px; } }
 
 /*# sourceMappingURL=Header.stylesheet.css.map */
