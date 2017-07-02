@@ -3,6 +3,7 @@
 .Jumbotron {
   position: relative;
   height: 100%;
+  z-index: 2;
 }
 
 .headingWrapper {
@@ -38,6 +39,7 @@
   background: $jumbotron-arrow-back-color;
   animation: bounce 5s infinite 2s;
   transform-origin: center bottom;
+  cursor: pointer;
 }
 
 .arrow {

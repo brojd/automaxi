@@ -5,7 +5,7 @@
   height: 140px;
   font-size: 14px;
   background: white;
-  border-radius: 18px;
+  border-radius: 6px;
   box-shadow: 0 0 2px 2px #1b398f;
   color: #434343;
   width: 105px;
@@ -14,7 +14,8 @@
   left: -22px;
   top: 50vh;
   transform: translateY(-50px);
-  z-index: 6; }
+  z-index: 6;
+  animation: moveRight 2s; }
 
 .underlining {
   border: 1px solid #1b398f;
@@ -40,5 +41,10 @@
 @keyframes moveLeft {
   to {
     left: -750px; } }
+@keyframes moveRight {
+  from {
+    left: -300px; }
+  to {
+    left: -22px; } }
 
 /*# sourceMappingURL=ClientLogos.stylesheet.css.map */

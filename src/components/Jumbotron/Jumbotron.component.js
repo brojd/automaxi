@@ -1,6 +1,7 @@
 import React, { Component }  from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
+import { animateScroll } from 'react-scroll';
 import { getJumbotron } from '../../selectors/main.js'
 import styles from './Jumbotron.stylesheet.css';
 import OuterJumbotron from '../../HOC/OuterJumbotron/OuterJumbotron.component';
@@ -24,9 +25,9 @@ class Jumbotron extends Component {
             <hr className={styles.underlining} />
           </span>
         </div>
-        <div className={styles.arrowBack}>
-          <span className={styles.arrow}>&#8249;</span>
-        </div>
+        <a className={styles.arrowBack} onClick={() => animateScroll.scrollTo(660)}>
+            <span className={styles.arrow}>&#8249;</span>
+        </a>
       </section>
     )
   }

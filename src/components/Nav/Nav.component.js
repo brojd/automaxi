@@ -1,7 +1,8 @@
 import React from 'react';
+import { animateScroll } from 'react-scroll';
 import styles from './Nav.stylesheet.css';
 import { headerDict } from '../../static_data/dictionary';
-import { animateScroll } from 'react-scroll';
+
 
 const navDict = headerDict.nav
 

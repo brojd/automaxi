@@ -3,7 +3,8 @@
 /* JUMBOTRON */
 .Jumbotron {
   position: relative;
-  height: 100%; }
+  height: 100%;
+  z-index: 2; }
 
 .headingWrapper {
   display: flex;
@@ -38,7 +39,8 @@
   border-radius: 50%;
   background: #1b398f;
   animation: bounce 5s infinite 2s;
-  transform-origin: center bottom; }
+  transform-origin: center bottom;
+  cursor: pointer; }
 
 .arrow {
   position: absolute;
