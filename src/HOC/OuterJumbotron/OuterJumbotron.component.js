@@ -24,7 +24,7 @@ function OuterJumbotron(WrappedComponent, images, timeout) {
     }
 
     componentDidMount() {
-      this.backgroundInterval = window.setInterval(this.changeBackground, timeout);
+      //this.backgroundInterval = window.setInterval(this.changeBackground, timeout);
     }
 
     componentWillUnmount() {

@@ -1,31 +1,69 @@
-import React from 'react';
+import React, { Component } from 'react';
+import cn from 'classnames';
 import Nav from '../Nav/Nav.component';
-import ClientLogos from '../ClientLogos/ClientLogos.component';
 import styles from './Header.stylesheet.css';
 import logo from './images/logo.png';
-import logo1 from './clientLogos/logo1.jpg';
-import logo2 from './clientLogos/logo2.png';
-import logo3 from './clientLogos/logo3.jpg';
-import logo4 from './clientLogos/logo4.jpg';
-import logo5 from './clientLogos/logo5.jpg';
-import logo6 from './clientLogos/logo6.jpg';
 
-const logoList = [logo1, logo2, logo3, logo4, logo5, logo6]
+class Header extends Component {
+  constructor() {
+    super();
+    this.onScroll = this.onScroll.bind(this);
+    this.setHeaderVisibility = this.setHeaderVisibility.bind(this);
+    this.state = {
+      scrollY: 0,
+      headerVisible: true
+    }
+  }
 
-const Header = () =>
-  <header className={styles.Header}>
-    <div className={styles.contentWrapper}>
-      <img
-        src={logo}
-        alt="logo"
-        className={styles.logo}
-      />
-      <ClientLogos
-        logoHeight={50}
-        logoList={logoList}
-      />
-      <Nav />
-    </div>
-  </header>;
+  setHeaderVisibility(value) {
+    this.setState({ headerVisible: value });
+  }
+
+  onScroll() {
+    this.setState({
+      headerVisible: window.scrollY <= this.state.scrollY,
+      scrollY: window.scrollY
+    });
+  }
+
+  componentWillMount() {
+    window.addEventListener('scroll', this.onScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.onScroll);
+  }
+
+  render() {
+    return (
+      <header className={cn(
+        styles.Header,
+        { [styles.hideHeader]: !this.state.headerVisible },
+        { [styles.showHeader]: this.state.headerVisible }
+      )}>
+        <div
+          className={cn(
+            styles.arrow,
+            {[styles['arrow--down']]: !this.state.headerVisible},
+            {[styles['arrow--up']]: this.state.headerVisible}
+          )}
+          onMouseOver={() => !this.state.headerVisible && this.setHeaderVisibility(true)}
+          onClick={() => this.state.headerVisible && this.setHeaderVisibility(false)}
+        >
+          &#8249;
+        </div>
+        <div className={styles.contentWrapper}>
+          <img
+            src={logo}
+            alt="logo"
+            className={styles.logo}
+          />
+          <Nav />
+        </div>
+      </header>
+    )
+  }
+}
+
 
 export default Header;

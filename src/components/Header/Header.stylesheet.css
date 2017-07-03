@@ -4,18 +4,61 @@
 .Header {
   position: fixed;
   width: 100%;
-  background: white;
+  background: linear-gradient(to bottom right, #ffffff 9%, #080b10 123%);
+  color: antiquewhite;
   z-index: 5; }
 
+.arrow {
+  position: absolute;
+  width: 35px;
+  height: 48px;
+  line-height: 31px;
+  text-align: center;
+  top: 63px;
+  color: #fecc00;
+  right: 21px;
+  background: #1b398f;
+  font-family: Arial Narrow, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 5.5rem;
+  cursor: pointer;
+  border: 1px solid #5f5f5f;
+  border-left: none;
+  z-index: 5; }
+  .arrow--down {
+    transform: rotate(-90deg); }
+  .arrow--up {
+    transform: rotate(90deg); }
+
 .contentWrapper {
-  height: 100px;
+  height: 70px;
   display: flex;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-between;
+  z-index: 6; }
 
 .logo {
-  width: 120px;
+  width: 100px;
   height: auto;
   margin-left: 30px; }
+
+.hideHeader {
+  animation: moveUp 2s;
+  animation-fill-mode: forwards; }
+
+.showHeader {
+  animation: moveDown 1.5s;
+  animation-fill-mode: forwards; }
+
+@keyframes moveDown {
+  from {
+    top: -75px; }
+  to {
+    top: 0; } }
+@keyframes moveUp {
+  from {
+    top: 0; }
+  to {
+    top: -75px; } }
 
 /*# sourceMappingURL=Header.stylesheet.css.map */

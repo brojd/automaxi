@@ -2,17 +2,25 @@
 
 .Nav {
   margin-right: $nav-margin-right;
+  height: 100%;
+  line-height: $header-height;
 }
 
 .listItem {
+  color: white;
+  text-shadow: 1px 1px 0 #c3c3c3, -1px -1px #000000;
+  font-weight: 400;
+  font-size: 1.2rem;
+  height: $header-height;
   display: inline-block;
-  font-size: $nav-font-size;
-  padding: 5px 0;
-  &:not(:last-child) {
-    margin-right: $nav-elem-margin-right;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  &:hover:not(&--active) {
+    background: linear-gradient(#eae9e9, #636363);
   }
 }
 
 .listItem--active {
-  border-bottom: 2px solid darkblue;
+  background: linear-gradient(to bottom, #272727 18%, #27396d 100%);
 }
