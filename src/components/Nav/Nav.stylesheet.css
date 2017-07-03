@@ -2,16 +2,24 @@
 /* HEADER */
 /* JUMBOTRON */
 .Nav {
-  margin-right: 30px; }
+  margin-right: 30px;
+  height: 100%;
+  line-height: 70px; }
 
 .listItem {
-  display: inline-block;
+  color: white;
+  text-shadow: 1px 1px 0 #c3c3c3, -1px -1px #000000;
+  font-weight: 400;
   font-size: 1.2rem;
-  padding: 5px 0; }
-  .listItem:not(:last-child) {
-    margin-right: 30px; }
+  height: 70px;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  cursor: pointer; }
+  .listItem:hover:not(.listItem--active) {
+    background: linear-gradient(#eae9e9, #636363); }
 
 .listItem--active {
-  border-bottom: 2px solid darkblue; }
+  background: linear-gradient(to bottom, #272727 18%, #27396d 100%); }
 
 /*# sourceMappingURL=Nav.stylesheet.css.map */

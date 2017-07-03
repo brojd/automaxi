@@ -8,15 +8,15 @@ class Header extends Component {
   constructor() {
     super();
     this.onScroll = this.onScroll.bind(this);
-    this.toggleHeader = this.toggleHeader.bind(this);
+    this.setHeaderVisibility = this.setHeaderVisibility.bind(this);
     this.state = {
       scrollY: 0,
       headerVisible: true
     }
   }
 
-  toggleHeader() {
-    this.setState({ headerVisible: !this.state.headerVisible });
+  setHeaderVisibility(value) {
+    this.setState({ headerVisible: value });
   }
 
   onScroll() {
@@ -47,7 +47,8 @@ class Header extends Component {
             {[styles['arrow--down']]: !this.state.headerVisible},
             {[styles['arrow--up']]: this.state.headerVisible}
           )}
-          onClick={this.toggleHeader}
+          onMouseOver={() => !this.state.headerVisible && this.setHeaderVisibility(true)}
+          onClick={() => this.state.headerVisible && this.setHeaderVisibility(false)}
         >
           &#8249;
         </div>
