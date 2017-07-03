@@ -38,5 +38,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/dominik791/react-redux-CRA-CSSModules-starter"
-  }
+  },
+  "homepage": "./"
 }
