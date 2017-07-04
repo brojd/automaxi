@@ -1,56 +1,52 @@
 import React, { Component } from 'react';
-import { Link } from 'react-scroll';
-import cn from 'classnames';
+import { Link, scrollSpy } from 'react-scroll';
 import styles from './Nav.stylesheet.css';
 import { headerDict } from '../../static_data/dictionary';
 
 const navDict = headerDict.nav
 
 class Nav extends Component {
-  constructor() {
-    super();
-    this.changeTab = this.changeTab.bind(this);
-    this.state = {
-      currentTab: 1
-    }
-  }
 
-  changeTab(tab) {
-    this.setState({ currentTab: tab })
+  componentDidMount() {
+    scrollSpy.update();
   }
 
   render() {
     return (
       <nav className={styles.Nav}>
         <Link
+          spy={true}
           smooth={true}
           to="start"
-          onClick={() => this.changeTab(1)}
-          className={cn(styles.listItem, { [styles['listItem--active']]: this.state.currentTab === 1 })}
+          activeClass={styles['listItem--active']}
+          className={styles.listItem}
         >
           {navDict.start}
         </Link>
         <Link
+          spy={true}
           smooth={true}
           to="about-us"
-          onClick={() => this.changeTab(2)}
-          className={cn(styles.listItem, { [styles['listItem--active']]: this.state.currentTab === 2 })}
+          activeClass={styles['listItem--active']}
+          className={styles.listItem}
         >
           {navDict.about}
         </Link>
         <Link
+          spy={true}
           smooth={true}
           to="offer"
-          onClick={() => this.changeTab(3)}
-          className={cn(styles.listItem, { [styles['listItem--active']]: this.state.currentTab === 3 })}
+          activeClass={styles['listItem--active']}
+          className={styles.listItem}
         >
           {navDict.offer}
         </Link>
         <Link
+          spy={true}
           smooth={true}
           to="contact"
-          onClick={() => this.changeTab(4)}
-          className={cn(styles.listItem, { [styles['listItem--active']]: this.state.currentTab === 4 })}
+          activeClass={styles['listItem--active']}
+          className={styles.listItem}
         >
           {navDict.contact}
         </Link>

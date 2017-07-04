@@ -7,7 +7,6 @@ import logo from './images/logo.png';
 class Header extends Component {
   constructor() {
     super();
-    this.onScroll = this.onScroll.bind(this);
     this.setHeaderVisibility = this.setHeaderVisibility.bind(this);
     this.state = {
       scrollY: 0,
@@ -17,21 +16,6 @@ class Header extends Component {
 
   setHeaderVisibility(value) {
     this.setState({ headerVisible: value });
-  }
-
-  onScroll() {
-    this.setState({
-      headerVisible: window.scrollY <= this.state.scrollY,
-      scrollY: window.scrollY
-    });
-  }
-
-  componentWillMount() {
-    window.addEventListener('scroll', this.onScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.onScroll);
   }
 
   render() {

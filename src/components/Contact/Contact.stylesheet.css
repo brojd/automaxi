@@ -1,7 +1,7 @@
 .Contact {
   position: relative;
   color: white;
-  padding: 0 8vw; }
+  padding: 8vh 8vw 0 8vw; }
 
 .contactInfoWrapper {
   display: flex;
