@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import styles from './Description.stylesheet.css';
 
 const Description = ({ backgroundImg, heading, text, isDark }) =>

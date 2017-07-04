@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { animateScroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import cn from 'classnames';
 import styles from './Nav.stylesheet.css';
 import { headerDict } from '../../static_data/dictionary';
-
 
 const navDict = headerDict.nav
 
@@ -23,30 +22,38 @@ class Nav extends Component {
   render() {
     return (
       <nav className={styles.Nav}>
-        <a
-          onClick={() => { animateScroll.scrollToTop(); this.changeTab(1); }}
+        <Link
+          smooth={true}
+          to="start"
+          onClick={() => this.changeTab(1)}
           className={cn(styles.listItem, { [styles['listItem--active']]: this.state.currentTab === 1 })}
         >
           {navDict.start}
-        </a>
-        <a
-          onClick={() => { animateScroll.scrollTo(660); this.changeTab(2); }}
+        </Link>
+        <Link
+          smooth={true}
+          to="about-us"
+          onClick={() => this.changeTab(2)}
           className={cn(styles.listItem, { [styles['listItem--active']]: this.state.currentTab === 2 })}
         >
           {navDict.about}
-        </a>
-        <a
-          onClick={() => { animateScroll.scrollTo(1325); this.changeTab(3); }}
+        </Link>
+        <Link
+          smooth={true}
+          to="offer"
+          onClick={() => this.changeTab(3)}
           className={cn(styles.listItem, { [styles['listItem--active']]: this.state.currentTab === 3 })}
         >
           {navDict.offer}
-        </a>
-        <a
-          onClick={() => { animateScroll.scrollToBottom(); this.changeTab(4); }}
+        </Link>
+        <Link
+          smooth={true}
+          to="contact"
+          onClick={() => this.changeTab(4)}
           className={cn(styles.listItem, { [styles['listItem--active']]: this.state.currentTab === 4 })}
         >
           {navDict.contact}
-        </a>
+        </Link>
       </nav>
     )
   }

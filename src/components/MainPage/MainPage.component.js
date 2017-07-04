@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
+import { Element } from 'react-scroll';
 import Jumbotron from '../Jumbotron/Jumbotron.component';
 import Description from '../Description/Description.component';
 import Services from '../Services/Services.component';
@@ -14,13 +15,19 @@ import styles from './MainPage.stylesheet.css';
 const MainPage = ({ description, summary }) =>
   <section>
     <ClientLogos logoHeight={40} />
-    <Jumbotron />
-    <Description
-      backgroundImg={background}
-      heading={description.heading}
-      text={description.text}
-    />
-    <Services />
+    <Element name="start">
+      <Jumbotron />
+    </Element>
+    <Element name="about-us">
+      <Description
+        backgroundImg={background}
+        heading={description.heading}
+        text={description.text}
+      />
+    </Element>
+    <Element name="offer">
+      <Services />
+    </Element>
     <div
       className={styles.lastSectionsWrapper}
       style={{ background: `url(${tiresBackground}) center center / cover fixed` }}
@@ -32,7 +39,9 @@ const MainPage = ({ description, summary }) =>
         isDark={true}
       />
       <div className={styles.contactBackground}></div>
-      <Contact />
+      <Element name="contact">
+        <Contact />
+      </Element>
     </div>
   </section>
 
