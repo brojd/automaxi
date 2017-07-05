@@ -6,6 +6,7 @@ import { getContact } from '../../selectors/main';
 import styles from './Contact.stylesheet.css';
 import building from './images/building.jpg';
 import marker from './images/marker.png';
+import config from '../../../config.json';
 
 const GoogleMarker = () =>
   <img
@@ -39,6 +40,9 @@ const Contact = ({ contact }) =>
         <GoogleMapReact
           defaultCenter={{ lat: 51.1483784, lng: 17.0298001 }}
           defaultZoom={13}
+          bootstrapURLKeys={{
+            key: config.googleAPIKey
+          }}
         >
           <GoogleMarker
             lat={51.151555}
