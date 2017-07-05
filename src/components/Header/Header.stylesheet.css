@@ -43,11 +43,11 @@
   margin-left: 30px; }
 
 .hideHeader {
-  animation: moveUp 2s;
+  animation: moveUp 1.3s;
   animation-fill-mode: forwards; }
 
 .showHeader {
-  animation: moveDown 1.5s;
+  animation: moveDown 1s;
   animation-fill-mode: forwards; }
 
 @keyframes moveDown {

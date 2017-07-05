@@ -1,15 +1,15 @@
 .Contact {
   position: relative;
   color: white;
-  padding: 8vh 8vw 0 8vw; }
+  padding: 10vh 8vw 0 8vw; }
 
 .contactInfoWrapper {
   display: flex;
   justify-content: space-between;
-  padding: 5vh 0; }
+  padding: 3vh 0; }
 
 .pictureMapWrapper {
-  padding: 5vh 0; }
+  padding: 3vh 0; }
 
 .buildingPhoto {
   width: 31vw;

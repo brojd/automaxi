@@ -1,6 +1,6 @@
 .lastSectionsWrapper {
   position: relative;
-  height: 200vh; }
+  height: 210vh; }
 
 .descriptionBackground {
   background: #1b2f69;
@@ -14,7 +14,7 @@
   height: 50%;
   width: 100%;
   position: absolute;
-  top: 100vh;
+  top: 105vh;
   opacity: 0.95; }
 
 /*# sourceMappingURL=MainPage.stylesheet.css.map */

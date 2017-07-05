@@ -30,6 +30,7 @@ class Jumbotron extends Component {
           className={styles.arrowBack}
           spy={true}
           smooth={true}
+          offset={5}
         >
             <span className={styles.arrow}>&#8249;</span>
         </Link>
