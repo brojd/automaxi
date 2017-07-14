@@ -1,20 +1,19 @@
 @import '../../global_styles/_variables.scss';
 
 .ClientLogos {
-  height: 140px;
+  height: 100px;
   font-size: 14px;
   background: rgba(255, 255, 255, 1);
   border-radius: 6px;
   box-shadow: 0 0 2px 2px #1b398f;
   color: #434343;
-  width: 105px;
+  width: 300px;
   overflow: hidden;
   position: fixed;
-  left: -22px;
-  top: 50vh;
-  transform: translateY(-50px);
+  left: 0;
+  bottom: 0;
   z-index: 6;
-  animation: moveRight 2s;
+  animation: moveRight 1.3s;
 }
 
 .underlining {
@@ -25,20 +24,31 @@
 .title {
   padding: 7px;
   display: block;
-  text-align: right;
+  text-align: left;
   background: #1b398f;
   color: #fecc00;
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
 }
 
-.logo {
-  margin-top: 35px;
+.close-icon {
   position: absolute;
-  left: 150px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.logo {
+  margin-top: 15px;
+  position: absolute;
+  left: 300px;
   animation: moveLeft 17s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+}
+
+.hideComponent {
+  animation: hideComponent 2s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes moveLeft {
@@ -52,6 +62,13 @@
     left: -300px;
   }
   to {
-    left: -22px;
+    left: 0;
   }
 }
+
+@keyframes hideComponent {
+  to {
+    left: -350px;
+  }
+}
+

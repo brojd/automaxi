@@ -4,14 +4,14 @@
 .Nav {
   margin-right: 30px;
   height: 100%;
-  line-height: 70px; }
+  line-height: 90px; }
 
 .listItem {
   color: white;
   text-shadow: 1px 1px 0 #c3c3c3, -1px -1px #000000;
   font-weight: 400;
   font-size: 1.2rem;
-  height: 70px;
+  height: 90px;
   display: inline-block;
   width: 100px;
   text-align: center;
