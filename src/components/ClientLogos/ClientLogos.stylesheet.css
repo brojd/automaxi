@@ -38,7 +38,7 @@
   margin-top: 15px;
   position: absolute;
   left: 300px;
-  animation: moveLeft 17s;
+  animation: moveLeft 20s;
   animation-iteration-count: infinite;
   animation-timing-function: linear; }
 
@@ -48,14 +48,17 @@
 
 @keyframes moveLeft {
   to {
-    left: -750px; } }
+    left: -2550px; } }
 @keyframes moveRight {
   from {
     left: -300px; }
   to {
     left: 0; } }
 @keyframes hideComponent {
-  to {
-    left: -350px; } }
+  99% {
+    left: -350px; }
+  100% {
+    left: -351px;
+    display: none; } }
 
 /*# sourceMappingURL=ClientLogos.stylesheet.css.map */

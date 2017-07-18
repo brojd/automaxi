@@ -14,7 +14,7 @@ import styles from './MainPage.stylesheet.css';
 
 const MainPage = ({ description, summary }) =>
   <section>
-    <ClientLogos logoHeight={50} />
+    <ClientLogos logoHeight={40} />
     <Element name="start">
       <Jumbotron />
     </Element>
