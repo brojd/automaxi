@@ -3,6 +3,7 @@ export const headerDict = {
     start: 'Start',
     about: 'O nas',
     offer: 'Oferta',
+    cooperation: 'Współpraca',
     contact: 'Kontakt'
   },
   clientLogosText: 'Zaufali nam:'

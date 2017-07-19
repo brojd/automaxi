@@ -46,6 +46,16 @@ class Nav extends Component {
         <Link
           spy={true}
           smooth={true}
+          offset={15}
+          to="cooperation"
+          activeClass={styles['listItem--active']}
+          className={styles.listItem}
+        >
+          {navDict.cooperation}
+        </Link>
+        <Link
+          spy={true}
+          smooth={true}
           to="contact"
           activeClass={styles['listItem--active']}
           className={styles.listItem}

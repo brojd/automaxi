@@ -38,6 +38,14 @@ const initialState = {
         list: []
       },
     },
+    cooperation1: {
+      heading: '',
+      text: ''
+    },
+    cooperation2: {
+      heading: '',
+      text: ''
+    },
     contact: {
       openingHours: [],
       address1: '',
@@ -66,6 +74,7 @@ export const getMainData = () => {
   return dispatch => {
     dispatch(turnOnLoading());
     fetchMainData().then(data => {
+      debugger;
       const dataToSet = {
         jumbotron: {
           headings: data.data.fields.jumbotronHeadings
@@ -92,6 +101,14 @@ export const getMainData = () => {
             text: data.data.fields.services3Text,
             list: data.data.fields.services3List
           }
+        },
+        cooperation1: {
+          heading: data.data.fields.cooperation1Heading,
+          text: data.data.fields.cooperation1Text
+        },
+        cooperation2: {
+          heading: data.data.fields.cooperation2Heading,
+          text: data.data.fields.cooperation2Text
         },
         summary: {
           heading: data.data.fields.summaryHeading,

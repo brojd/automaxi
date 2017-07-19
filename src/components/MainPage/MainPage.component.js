@@ -8,11 +8,12 @@ import Services from '../Services/Services.component';
 import Contact from '../Contact/Contact.component';
 import ClientLogos from '../ClientLogos/ClientLogos.component';
 import background from '../../common_images/background2.jpg';
+import backgroundDark from '../../common_images/backgroundDark2.jpg';
 import tiresBackground from './images/tires.jpg';
-import { getDescription, getSummary } from '../../selectors/main';
+import { getDescription, getSummary, getCooperation1, getCooperation2 } from '../../selectors/main';
 import styles from './MainPage.stylesheet.css';
 
-const MainPage = ({ description, summary }) =>
+const MainPage = ({ description, summary, cooperation1, cooperation2 }) =>
   <section>
     <ClientLogos logoHeight={40} />
     <Element name="start">
@@ -27,6 +28,19 @@ const MainPage = ({ description, summary }) =>
     </Element>
     <Element name="offer">
       <Services />
+    </Element>
+    <Element name="cooperation">
+      <Description
+        backgroundImg={background}
+        heading={cooperation1.heading}
+        text={cooperation1.text}
+      />
+      <Description
+        backgroundImg={backgroundDark}
+        heading={cooperation2.heading}
+        text={cooperation2.text}
+        isDark={true}
+      />
     </Element>
     <div
       className={styles.lastSectionsWrapper}
@@ -48,7 +62,9 @@ const MainPage = ({ description, summary }) =>
 const mapStateToProps = state => {
   return {
     description: getDescription(state),
-    summary: getSummary(state)
+    summary: getSummary(state),
+    cooperation1: getCooperation1(state),
+    cooperation2: getCooperation2(state)
   }
 }
 
