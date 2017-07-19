@@ -29,7 +29,7 @@
   font-size: 12px;
   text-transform: uppercase; }
 
-.close-icon {
+.closeIcon {
   position: absolute;
   right: 10px;
   cursor: pointer; }
