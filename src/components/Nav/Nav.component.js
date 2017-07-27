@@ -57,6 +57,7 @@ class Nav extends Component {
           spy={true}
           smooth={true}
           to="contact"
+          offset={-15}
           activeClass={styles['listItem--active']}
           className={styles.listItem}
         >

@@ -84,7 +84,6 @@ export const getMainData = () => {
   return dispatch => {
     dispatch(turnOnLoading());
     fetchMainData().then(data => {
-      debugger
       const dataToSet = {
         jumbotron: {
           headings: data.data.fields.jumbotronHeadings

@@ -13,7 +13,7 @@ const ServiceDetails = props => {
          className={styles.image}
          style={{
            float: props.isBright ? 'left' : 'right',
-           width: props.imageWidth
+           width: `${props.imageWidthInVW}vw`
          }}
     />;
 
@@ -26,7 +26,7 @@ const ServiceDetails = props => {
     >
       {props.isBright && mainImg}
       <div className={styles.contentWrapper}
-           style={{ width: `${100 - props.imageWidth}vw`}}
+           style={{ width: `${100 - props.imageWidthInVW}vw` }}
       >
         <h3 className={styles.heading}>{props.heading}</h3>
         <hr className={
@@ -61,7 +61,7 @@ ServiceDetails.propTypes = {
   heading: PropTypes.string,
   text: PropTypes.string,
   image: PropTypes.string,
-  imageWidth: PropTypes.string,
+  imageWidthInVW: PropTypes.string,
   bulletList: PropTypes.arrayOf(PropTypes.string)
 };
 
