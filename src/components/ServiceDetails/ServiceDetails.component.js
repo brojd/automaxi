@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ReactMarkdown from 'react-markdown'
 import styles from './ServiceDetails.stylesheet.css';
 import checkboxBlue from './images/checkbox.png';
 import checkboxRed from './images/checkboxRed.png';
@@ -34,7 +35,7 @@ const ServiceDetails = props => {
             styles['underlining--primary-color']
             : styles['underlining--secondary-color']}`
           } />
-        <span className={styles.text}>{props.text}</span>
+        <span className={styles.text}><ReactMarkdown source={props.text} /></span>
         <ul>
           {props.bulletList && props.bulletList.map(
             (item, index) =>
