@@ -31,11 +31,6 @@ const MainPage = ({ description, summary, cooperation1, cooperation2 }) =>
     </Element>
     <Element name="cooperation">
       <Description
-        backgroundImg={background}
-        heading={cooperation1.heading}
-        text={cooperation1.text}
-      />
-      <Description
         backgroundImg={backgroundDark}
         heading={cooperation2.heading}
         text={cooperation2.text}
@@ -48,8 +43,8 @@ const MainPage = ({ description, summary, cooperation1, cooperation2 }) =>
     >
       <div className={styles.descriptionBackground}></div>
       <Description
-        heading={description.heading}
-        text={description.text}
+        heading={cooperation1.heading}
+        text={cooperation1.text}
         isDark={true}
       />
       <div className={styles.contactBackground}></div>

@@ -35,24 +35,33 @@ const Services = ({ services }) =>
       text={services.services2.text}
     />
     <ServiceDetails
-      bulletList={services.services1.list}
-      heading={services.services1.heading}
+      bulletList={services.services3.list}
+      heading={services.services3.heading}
       image={service1}
       imageWidth={'40vw'}
       isBright={true}
-      text={services.services1.text}
+      text={services.services3.text}
     />
     <ServiceDetails
-      bulletList={services.services3.list}
-      heading={services.services3.heading}
+      bulletList={services.services4.list}
+      heading={services.services4.heading}
       image={service3}
       imageWidth={'46vw'}
       isBright={false}
-      text={services.services3.text}
+      text={services.services4.text}
+    />
+    <ServiceDetails
+      bulletList={services.services5.list}
+      heading={services.services5.heading}
+      image={service1}
+      imageWidth={'40vw'}
+      isBright={true}
+      text={services.services5.text}
     />
   </section>
 
 const mapStateToProps = state => {
+  debugger
   return {
     services: getServices(state)
   }

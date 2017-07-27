@@ -36,7 +36,7 @@ const ServiceDetails = props => {
           } />
         <span className={styles.text}>{props.text}</span>
         <ul>
-          {props.bulletList.map(
+          {props.bulletList && props.bulletList.map(
             (item, index) =>
               <li key={index}
                   className={styles.listItem}
