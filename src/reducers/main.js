@@ -37,6 +37,16 @@ const initialState = {
         text: '',
         list: []
       },
+      services4: {
+        heading: '',
+        text: '',
+        list: []
+      },
+      services5: {
+        heading: '',
+        text: '',
+        list: []
+      },
     },
     cooperation1: {
       heading: '',
@@ -74,7 +84,6 @@ export const getMainData = () => {
   return dispatch => {
     dispatch(turnOnLoading());
     fetchMainData().then(data => {
-      debugger;
       const dataToSet = {
         jumbotron: {
           headings: data.data.fields.jumbotronHeadings
@@ -100,6 +109,16 @@ export const getMainData = () => {
             heading: data.data.fields.services3Heading,
             text: data.data.fields.services3Text,
             list: data.data.fields.services3List
+          },
+          services4: {
+            heading: data.data.fields.services4Heading,
+            text: data.data.fields.services4Text,
+            list: data.data.fields.services4List
+          },
+          services5: {
+            heading: data.data.fields.services5Heading,
+            text: data.data.fields.services5Text,
+            list: data.data.fields.services5List
           }
         },
         cooperation1: {

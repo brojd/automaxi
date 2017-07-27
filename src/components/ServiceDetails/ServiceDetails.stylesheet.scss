@@ -38,6 +38,9 @@
   @include text();
   margin-bottom: 15px;
   display: inline-block;
+  a {
+    color: white;
+  }
 }
 
 .listItem {

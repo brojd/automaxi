@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './Description.stylesheet.css';
+import ReactMarkdown from 'react-markdown'
 
 const Description = ({ backgroundImg, heading, text, isDark }) =>
   <div className={`${styles.Description} ${styles[isDark ? 'color-white' : 'color-dark']}`}>
@@ -10,7 +11,7 @@ const Description = ({ backgroundImg, heading, text, isDark }) =>
     <div className={styles.contentWrapper}>
       <h3 className={`${styles.heading} ${styles[isDark ? 'color-white' : 'color-dark']}`}>{heading}</h3>
       <hr className={`${styles.underlining} ${styles[isDark ? 'underlining-yellow' : 'underlining-blue']}`} />
-      <div className={styles.text}>{text}</div>
+      <div className={styles.text}><ReactMarkdown source={text} /></div>
     </div>
   </div>
 
