@@ -1,17 +1,41 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { getMainData } from '../../reducers/main';
+import { getIsLoading } from '../../selectors/main';
 import styles from './App.stylesheet.css';
 import Header from '../Header/Header.component';
-import Nav from '../Nav/Nav.component';
 import Footer from '../Footer/Footer.component';
 
-const App = ({ children }) =>
-  <section className={styles.App}>
-    <Header />
-    <Nav />
-    <main className={styles.main}>
-      {children}
-    </main>
-    <Footer />
-  </section>;
+class App extends Component {
+  componentDidMount() {
+    this.props.getMainData()
+  }
 
-export default App;
+  render() {
+    return (
+      <section className={styles.App}>
+        <Header />
+        {
+          this.props.isLoading ?
+            <div>is loading...</div>
+            : <main className={styles.main}>
+            {this.props.children}
+          </main>
+        }
+        <Footer />
+      </section>
+    );
+  }
+}
+
+const mapStateToProps = state => {
+  return {
+    isLoading: getIsLoading(state)
+  };
+};
+
+const mapDispatchToProps = {
+  getMainData
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

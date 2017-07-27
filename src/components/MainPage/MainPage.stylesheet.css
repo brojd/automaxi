@@ -1,0 +1,20 @@
+.lastSectionsWrapper {
+  position: relative;
+  height: 220vh; }
+
+.descriptionBackground {
+  background: #1b2f69;
+  height: 50%;
+  position: absolute;
+  opacity: 0.85;
+  width: 100%; }
+
+.contactBackground {
+  background: #101010;
+  height: 50%;
+  width: 100%;
+  position: absolute;
+  top: 110vh;
+  opacity: 0.95; }
+
+/*# sourceMappingURL=MainPage.stylesheet.css.map */

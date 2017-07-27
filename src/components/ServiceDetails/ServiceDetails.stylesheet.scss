@@ -1,0 +1,58 @@
+@import '../../global_styles/mixins';
+
+.ServiceDetails {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contentWrapper {
+  padding: 0 7vw;
+}
+
+.image {
+  display: inline-block;
+  height: auto;
+}
+
+.heading {
+  text-align: center;
+  @include heading(2rem);
+}
+
+.underlining {
+  width: 80px;
+  border: none;
+  margin-bottom: 30px;
+}
+
+.underlining--primary-color {
+  border-bottom: 11px solid $logo-primary-color
+}
+
+.underlining--secondary-color {
+  border-bottom: 11px solid $logo-secondary-color
+}
+
+.text {
+  @include text();
+  margin-bottom: 15px;
+  display: inline-block;
+  a {
+    color: white;
+  }
+}
+
+.listItem {
+  margin-left: 10px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.checkbox {
+  width: 15px;
+  height: auto;
+  margin-right: 10px;
+  display: inline-block;
+}

@@ -1,0 +1,19 @@
+/* GENERAL */
+$root-font-size: 16px;
+$logo-primary-color: #1b398f;
+$logo-secondary-color: #fecc00;
+$heading-font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat,
+  Bitstream Vera Sans Bold, Arial Black, sans serif;
+
+/* HEADER */
+$logo-width: 182px;
+$logo-margin-left: 30px;
+$header-height: 90px;
+$nav-margin-right: $logo-margin-left;
+$nav-elem-margin-right: $logo-margin-left;
+$nav-font-size: 1.2rem;
+
+/* JUMBOTRON */
+$jumbotron-heading-underlining-color: $logo-secondary-color;
+$jumbotron-arrow-back-color: $logo-primary-color;
+$jumbotron-heading-font-size: 3.1rem;

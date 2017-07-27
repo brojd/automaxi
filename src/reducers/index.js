@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import todos from './todos';
-import todosFilter from './todosFilter';
+import main from './main';
 
-const todoApp = combineReducers({
-  todos,
-  todosFilter
+const automaxi = combineReducers({
+  main,
 });
 
-export default todoApp;
+export default automaxi;

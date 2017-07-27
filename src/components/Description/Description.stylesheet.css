@@ -1,0 +1,53 @@
+/* GENERAL */
+/* HEADER */
+/* JUMBOTRON */
+.Description {
+  height: 110vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 0; }
+
+.background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1; }
+
+.contentWrapper {
+  width: 60vw; }
+
+.heading {
+  text-align: center;
+  margin-bottom: 3vh;
+  font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
+  font-weight: 200;
+  font-size: 2rem;
+  text-transform: uppercase; }
+
+.underlining {
+  width: 80px;
+  border-bottom: none;
+  margin-bottom: 15vh; }
+
+.text {
+  text-align: center;
+  word-spacing: 1px;
+  line-height: 1.3rem; }
+
+.color-white {
+  color: white; }
+
+.color-dark {
+  color: #333333; }
+
+.underlining-blue {
+  border: 11px solid #1b398f; }
+
+.underlining-yellow {
+  border: 11px solid #fecc00; }
+
+/*# sourceMappingURL=Description.stylesheet.css.map */

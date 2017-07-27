@@ -1,30 +1,25 @@
+@import '../../global_styles/variables';
+
 .Nav {
-  margin: 50px auto;
-  padding: 10px;
-  width: 100%;
-  background: black;
-  box-sizing: border-box;
+  height: 100%;
+  line-height: $header-height;
 }
 
-.link {
-  box-sizing: border-box;
-  height: 40px;
-  line-height: 40px;
-  width: 150px;
-  text-align: center;
-  display: inline-block;
-  border-radius: 3px;
-  background: none;
+.listItem {
   color: white;
-  text-decoration: none;
-  &:hover {
-    border-bottom: 1px solid white;
-  }
-  &:first-child {
-    margin-right: 30px;
+  text-shadow: 1px 1px 0 #c3c3c3, -1px -1px #000000;
+  font-weight: 400;
+  font-size: 1.2rem;
+  height: $header-height;
+  display: inline-block;
+  width: 119px;
+  text-align: center;
+  cursor: pointer;
+  &:hover:not(&--active) {
+    background: linear-gradient(to bottom right, #35373e, #4a567b);
   }
 }
 
-.activeLink {
-  background: #464646;
+.listItem--active {
+  background: linear-gradient(to bottom right, #272727 18%, #27396d 100%);
 }

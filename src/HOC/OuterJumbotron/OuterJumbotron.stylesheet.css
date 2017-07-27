@@ -1,0 +1,40 @@
+.OuterJumbotron {
+  position: relative;
+  overflow: hidden;
+  height: 105vh; }
+
+.secondBackground {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #131313;
+  z-index: -1;
+  opacity: 0.6; }
+
+.image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1; }
+
+.enter {
+  opacity: 0.01; }
+
+.enter.enterActive {
+  opacity: 1;
+  transition: opacity 1000ms; }
+
+.leave {
+  opacity: 1; }
+
+.leave.leaveActive {
+  opacity: 0.01;
+  transition: opacity 1000ms; }
+
+/*# sourceMappingURL=OuterJumbotron.stylesheet.css.map */

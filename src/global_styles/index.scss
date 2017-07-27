@@ -1,4 +1,9 @@
 @import './reset.scss';
+@import './_variables.scss';
+
+html {
+  font-size: $root-font-size;
+}
 
 body {
   margin: 0;

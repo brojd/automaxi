@@ -1,16 +1,76 @@
+@import '../../global_styles/_variables.scss';
+
 .Header {
+  position: fixed;
+  width: 100%;
+  background: linear-gradient(to bottom right, #ffffff 9%, #080b10 123%);
+  color: antiquewhite;
+  z-index: 5;
+}
+
+.arrow {
+  position: absolute;
+  width: 35px;
+  height: 48px;
+  line-height: 31px;
   text-align: center;
-  height: 180px;
+  top: 82px;
+  color: #fecc00;
+  right: 21px;
+  background: #1b398f;
+  font-family: Arial Narrow, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 5.5rem;
+  cursor: pointer;
+  border: 1px solid #5f5f5f;
+  border-left: none;
+  z-index: 5;
+  &--down {
+    transform: rotate(-90deg);
+  }
+  &--up {
+    transform: rotate(90deg);
+  }
 }
 
-.heading {
-  line-height: 120px;
+.contentWrapper {
+  height: $header-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 6;
 }
 
-.logoImg {
-  height: 60px;
-  width: auto;
-  &:not(:last-child) {
-    margin-right: 40px;
+.logo {
+  width: $logo-width;
+  height: auto;
+  margin-left: $logo-margin-left;
+}
+
+.hideHeader {
+  animation: moveUp 1.3s;
+  animation-fill-mode: forwards;
+}
+
+.showHeader {
+  animation: moveDown 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes moveDown {
+  from {
+    top: -95px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes moveUp {
+  from {
+    top: 0;
+  }
+  to {
+    top: -95px;
   }
 }

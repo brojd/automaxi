@@ -38,6 +38,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* GENERAL */
+/* HEADER */
+/* JUMBOTRON */
+html {
+  font-size: 16px; }
+
 body {
   margin: 0;
   padding: 0;
