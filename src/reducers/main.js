@@ -21,6 +21,7 @@ const initialState = {
     },
     services: {
       heading: '',
+      list: [],
       text: '',
       services1: {
         heading: '',
@@ -94,6 +95,7 @@ export const getMainData = () => {
         },
         services: {
           heading: data.data.fields.servicesHeading,
+          list: data.data.fields.servicesList,
           text: data.data.fields.servicesText,
           services1: {
             heading: data.data.fields.services1Heading,
@@ -123,7 +125,8 @@ export const getMainData = () => {
         },
         cooperation1: {
           heading: data.data.fields.cooperation1Heading,
-          text: data.data.fields.cooperation1Text
+          text: data.data.fields.cooperation1Text,
+          text2: data.data.fields.cooperation1Text2
         },
         cooperation2: {
           heading: data.data.fields.cooperation2Heading,

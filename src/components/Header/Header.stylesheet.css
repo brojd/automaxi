@@ -40,7 +40,8 @@
 .logo {
   width: 182px;
   height: auto;
-  margin-left: 30px; }
+  margin-left: 30px;
+  cursor: pointer; }
 
 .hideHeader {
   animation: moveUp 1.3s;

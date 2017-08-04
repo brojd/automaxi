@@ -1,0 +1,13 @@
+.listItem {
+  margin-left: 10px;
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.checkbox {
+  width: 15px;
+  height: auto;
+  margin-right: 10px;
+  display: inline-block;
+}

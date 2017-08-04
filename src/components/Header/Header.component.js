@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import cn from 'classnames';
+import { Link } from 'react-scroll';
 import Nav from '../Nav/Nav.component';
 import styles from './Header.stylesheet.css';
 import logo from './images/logo2.png';
@@ -37,11 +38,18 @@ class Header extends Component {
           &#8249;
         </div>
         <div className={styles.contentWrapper}>
-          <img
-            src={logo}
-            alt="logo"
-            className={styles.logo}
-          />
+          <Link
+            spy={true}
+            smooth={true}
+            to="start"
+            activeClass={styles['listItem--active']}
+          >
+            <img
+              src={logo}
+              alt="logo"
+              className={styles.logo}
+            />
+          </Link>
           <Nav />
         </div>
       </header>

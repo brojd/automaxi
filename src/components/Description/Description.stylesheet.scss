@@ -1,12 +1,11 @@
 @import '../../global_styles/mixins';
 
 .Description {
-  height: 110vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 
 .background {
@@ -30,7 +29,7 @@
 .underlining {
   width: 80px;
   border-bottom: none;
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
 }
 
 .text {

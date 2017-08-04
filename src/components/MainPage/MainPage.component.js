@@ -37,21 +37,27 @@ const MainPage = ({ description, summary, cooperation1, cooperation2 }) =>
         isDark={true}
       />
     </Element>
-    <div
-      className={styles.lastSectionsWrapper}
-      style={{ background: `url(${tiresBackground}) center center / cover fixed` }}
-    >
-      <div className={styles.descriptionBackground}></div>
-      <Description
-        heading={cooperation1.heading}
-        text={cooperation1.text}
-        isDark={true}
-      />
-      <div className={styles.contactBackground}></div>
-      <Element name="contact">
-        <Contact />
-      </Element>
-    </div>
+    <Element name="jobs">
+      <div
+        className={styles.lastSectionsWrapper}
+        style={{ background: `url(${tiresBackground}) center center / cover fixed` }}
+      >
+        <div className={styles.descriptionBackground}></div>
+        <Description
+          heading={cooperation1.heading}
+          text={cooperation1.text}
+          isDark={true}
+        />
+        <Description
+          text={cooperation1.text2}
+          isDark={true}
+        />
+        <div className={styles.contactBackground}></div>
+      </div>
+    </Element>
+    <Element name="contact">
+      <Contact />
+    </Element>
   </section>
 
 const mapStateToProps = state => {

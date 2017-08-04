@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import GoogleMapReact from 'google-map-react';
 import { connect } from 'react-redux';
+import backgroundDark from '../../common_images/backgroundDark2.jpg';
 import { getContact } from '../../selectors/main';
 import styles from './Contact.stylesheet.css';
 import building from './images/building.jpg';
@@ -16,7 +17,10 @@ const GoogleMarker = () =>
   />
 
 const Contact = ({ contact }) =>
-  <section className={styles.Contact}>
+  <section
+    className={styles.Contact}
+    style={{ background: `url(${backgroundDark}) center/cover fixed` }}
+  >
     <div className={styles.contactInfoWrapper}>
       <div className={styles.contactInfo}>
         <h3>Adres:</h3>
