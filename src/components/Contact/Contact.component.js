@@ -27,7 +27,7 @@ const Contact = ({ contact }) =>
         <h3>Adres:</h3>
         <p>{contact.address1}</p>
         <p>{contact.address2}</p>
-        {contact.address3 && <p><ReactMarkdown source={contact.address3} /></p>}
+        {contact.address3 && <ReactMarkdown source={contact.address3} />}
       </div>
       <div className={styles.contactInfo}>
         <h3>Godziny otwarcia:</h3>

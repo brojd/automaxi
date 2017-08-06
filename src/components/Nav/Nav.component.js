@@ -27,7 +27,7 @@ class Nav extends Component {
         <Link
           spy={true}
           smooth={true}
-          offset={15}
+          offset={10}
           to="offer"
           activeClass={styles['listItem--active']}
           className={styles.listItem}

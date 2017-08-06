@@ -3,7 +3,7 @@ import cn from 'classnames';
 import { Link } from 'react-scroll';
 import Nav from '../Nav/Nav.component';
 import styles from './Header.stylesheet.css';
-import logo from './images/logo2.png';
+import logo from './images/logo.png';
 
 class Header extends Component {
   constructor() {

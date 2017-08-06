@@ -20,7 +20,7 @@ const Description = ({ backgroundImg, heading, text, isDark, children, height = 
           </span>
       }
       {children}
-      <div className={styles.text}><ReactMarkdown source={text} /></div>
+      <div className={styles.text}><ReactMarkdown source={text || ''} /></div>
     </div>
   </div>
 

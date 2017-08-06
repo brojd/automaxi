@@ -30,7 +30,7 @@ const Services = ({ services }) =>
       bulletList={services.services1.list}
       heading={services.services1.heading}
       image={service1}
-      imageWidthInVW={50}
+      imageWidthInVW={30}
       isBright={true}
       text={services.services1.text}
     />
@@ -38,7 +38,7 @@ const Services = ({ services }) =>
       bulletList={services.services2.list}
       heading={services.services2.heading}
       image={service2}
-      imageWidthInVW={40}
+      imageWidthInVW={30}
       isBright={false}
       text={services.services2.text}
     >
@@ -54,7 +54,7 @@ const Services = ({ services }) =>
       bulletList={services.services3.list}
       heading={services.services3.heading}
       image={service3}
-      imageWidthInVW={50}
+      imageWidthInVW={30}
       isBright={true}
       text={services.services3.text}
     />
@@ -62,7 +62,7 @@ const Services = ({ services }) =>
       bulletList={services.services4.list}
       heading={services.services4.heading}
       image={service4}
-      imageWidthInVW={52}
+      imageWidthInVW={30}
       isBright={false}
       text={services.services4.text}
     />
@@ -70,7 +70,7 @@ const Services = ({ services }) =>
       bulletList={services.services5.list}
       heading={services.services5.heading}
       image={service5}
-      imageWidthInVW={55}
+      imageWidthInVW={30}
       isBright={true}
       text={services.services5.text}
     />
