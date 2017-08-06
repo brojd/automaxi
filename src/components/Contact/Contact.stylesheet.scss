@@ -39,13 +39,15 @@
 
 .contactInfo {
   text-align: center;
+  width: 33vw;
   h3, p:not(:last-child) {
     margin-bottom: 12px;
   }
 }
 
-.icons {
+.links {
   display: flex;
+  align-items: center;
   margin: 10vh auto 0 auto;
   width: 200px;
   justify-content: space-around;
@@ -64,6 +66,14 @@
       cursor: pointer;
       color: #969696;
       border-color: #969696;
+    }
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

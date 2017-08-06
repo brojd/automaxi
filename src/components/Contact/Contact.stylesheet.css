@@ -32,16 +32,18 @@
   border-radius: 20px; }
 
 .contactInfo {
-  text-align: center; }
+  text-align: center;
+  width: 33vw; }
   .contactInfo h3, .contactInfo p:not(:last-child) {
     margin-bottom: 12px; }
 
-.icons {
+.links {
   display: flex;
+  align-items: center;
   margin: 10vh auto 0 auto;
   width: 200px;
   justify-content: space-around; }
-  .icons i {
+  .links i {
     border: 2px solid #fff;
     width: 35px;
     height: 35px;
@@ -49,11 +51,17 @@
     position: relative;
     text-align: center;
     line-height: 35px; }
-    .icons i:before {
+    .links i:before {
       font-size: 15px; }
-    .icons i:hover {
+    .links i:hover {
       cursor: pointer;
       color: #969696;
       border-color: #969696; }
+  .links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px; }
+    .links a:hover {
+      text-decoration: underline; }
 
 /*# sourceMappingURL=Contact.stylesheet.css.map */

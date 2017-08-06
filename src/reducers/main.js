@@ -141,6 +141,7 @@ export const getMainData = () => {
           openingHours: data.data.fields.openingHours,
           address1: data.data.fields.address1,
           address2: data.data.fields.address2,
+          address3: data.data.fields.address3,
         }
       }
       dispatch(turnOffLoading());
