@@ -45,8 +45,14 @@
 
 .underlining-blue {
   border: 11px solid #1b398f; }
+  @media only screen and (max-width: 950px) {
+    .underlining-blue {
+      border: 9px solid #1b398f; } }
 
 .underlining-yellow {
   border: 11px solid #fecc00; }
+  @media only screen and (max-width: 950px) {
+    .underlining-yellow {
+      border: 9px solid #1b398f; } }
 
 /*# sourceMappingURL=Description.stylesheet.css.map */

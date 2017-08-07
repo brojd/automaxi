@@ -47,8 +47,14 @@
 
 .underlining-blue {
   border: 11px solid $logo-primary-color;
+  @media only screen and (max-width: 950px) {
+    border: 9px solid $logo-primary-color;
+  }
 }
 
 .underlining-yellow {
   border: 11px solid $logo-secondary-color;
+  @media only screen and (max-width: 950px) {
+    border: 9px solid $logo-primary-color;
+  }
 }
