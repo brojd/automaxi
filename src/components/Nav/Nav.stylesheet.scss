@@ -5,6 +5,16 @@
   line-height: $header-height;
 }
 
+.linksWrapper {
+  @media screen and (max-width: 950px) {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    width: 100vw;
+    background: #8894a7;
+  }
+}
+
 .listItem {
   color: white;
   text-shadow: 1px 1px 0 #c3c3c3, -1px -1px #000000;
@@ -18,8 +28,58 @@
   &:hover:not(&--active) {
     background: linear-gradient(to bottom right, #35373e, #4a567b);
   }
+  @media screen and (max-width: 950px) {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 100vw;
+  }
 }
 
 .listItem--active {
   background: linear-gradient(to bottom right, #272727 18%, #27396d 100%);
+}
+
+.toggleMenuButton {
+  position: absolute;
+  right: 22px;
+  top: 30px;
+  font-size: 25px;
+  color: white;
+  background: none;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    color: #e1e1e1
+  }
+}
+
+.expandNav {
+  animation: expandNav 1s;
+  animation-fill-mode: forwards;
+  z-index: 5;
+}
+
+.collapseNav {
+  animation: collapseNav 1s;
+  animation-fill-mode: forwards;
+  z-index: 5;
+}
+
+@keyframes expandNav {
+  from {
+    top: -180px;
+  }
+  to {
+    top: 90px;
+  }
+}
+
+@keyframes collapseNav {
+  from {
+    top: 90px;
+  }
+  to {
+    top: -180px;
+  }
 }
