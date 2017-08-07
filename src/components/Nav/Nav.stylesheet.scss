@@ -8,10 +8,12 @@
 .linksWrapper {
   @media screen and (max-width: 950px) {
     position: absolute;
+    overflow: hidden;
     top: 90px;
     left: 0;
     width: 100vw;
-    background: #8894a7;
+    background: linear-gradient(to bottom right, #636363 9%, #6d7582 123%);
+    z-index: 5;
   }
 }
 
@@ -57,29 +59,27 @@
 .expandNav {
   animation: expandNav 1s;
   animation-fill-mode: forwards;
-  z-index: 5;
 }
 
 .collapseNav {
   animation: collapseNav 1s;
   animation-fill-mode: forwards;
-  z-index: 5;
 }
 
 @keyframes expandNav {
   from {
-    top: -180px;
+    height: 0;
   }
   to {
-    top: 90px;
+    height: 200px;
   }
 }
 
 @keyframes collapseNav {
   from {
-    top: 90px;
+    height: 200px;
   }
   to {
-    top: -180px;
+    height: 0;
   }
 }

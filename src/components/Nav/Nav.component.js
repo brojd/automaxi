@@ -21,13 +21,10 @@ class Nav extends Component {
   render() {
     return (
       <nav className={styles.Nav}>
-        <div
-          // style={{ visibility: this.state.menuVisible ? 'visible' : 'hidden' }}
-          className={
-            cn(styles.linksWrapper,
-              { [styles.expandNav]: this.state.menuVisible },
-              { [styles.collapseNav]: !this.state.menuVisible })
-          }
+        <div className={cn(
+          styles.linksWrapper,
+          { [styles.expandNav]: this.state.menuVisible },
+          { [styles.collapseNav]: !this.state.menuVisible })}
         >
           <Link
             spy={true}
