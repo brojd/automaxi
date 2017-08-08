@@ -2,11 +2,18 @@
   position: relative;
   color: white;
   padding: 10vh 8vw 0 8vw; }
+  @media only screen and (max-width: 650px) {
+    .Contact {
+      font-size: .85rem; } }
 
 .contactInfoWrapper {
   display: flex;
   justify-content: space-between;
   padding: 3vh 0; }
+  @media only screen and (max-width: 650px) {
+    .contactInfoWrapper {
+      display: block;
+      margin: 0 auto; } }
 
 .pictureMapWrapper {
   padding: 3vh 0; }
@@ -18,6 +25,12 @@
   border: 1px solid #717171;
   display: inline-block;
   float: right; }
+  @media only screen and (max-width: 650px) {
+    .buildingPhoto {
+      display: block;
+      width: 84vw;
+      height: auto;
+      margin: 5px auto; } }
 
 .map {
   width: 31vw;
@@ -25,6 +38,12 @@
   border-radius: 3px;
   border: 1px solid #717171;
   display: inline-block; }
+  @media only screen and (max-width: 650px) {
+    .map {
+      display: block;
+      width: 84vw;
+      height: 54vw;
+      margin: 5px auto; } }
 
 .googleMarker {
   width: 80px;
@@ -36,6 +55,14 @@
   width: 33vw; }
   .contactInfo h3, .contactInfo p:not(:last-child) {
     margin-bottom: 12px; }
+  @media only screen and (max-width: 650px) {
+    .contactInfo {
+      width: 90vw;
+      margin: 0 auto;
+      text-align: left;
+      margin-bottom: 20px; }
+      .contactInfo h3, .contactInfo p:not(:last-child) {
+        margin-bottom: 2px; } }
 
 .links {
   display: flex;
@@ -63,5 +90,8 @@
     margin-left: 15px; }
     .links a:hover {
       text-decoration: underline; }
+  @media only screen and (max-width: 650px) {
+    .links {
+      padding-top: 17px; } }
 
 /*# sourceMappingURL=Contact.stylesheet.css.map */

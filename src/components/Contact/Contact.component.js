@@ -7,6 +7,7 @@ import backgroundDark from '../../common_images/backgroundDark2.jpg';
 import { getContact } from '../../selectors/main';
 import styles from './Contact.stylesheet.css';
 import building from './images/building.jpg';
+import building2 from './images/building2.jpg';
 import marker from './images/marker.png';
 import config from '../../../config.json';
 
@@ -59,6 +60,11 @@ const Contact = ({ contact }) =>
       <img
         src={building}
         alt="warsztat"
+        className={styles.buildingPhoto}
+      />
+      <img
+        src={building2}
+        alt="warsztat2"
         className={styles.buildingPhoto}
       />
       <div className={styles.links}>

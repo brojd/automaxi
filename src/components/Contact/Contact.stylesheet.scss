@@ -2,12 +2,19 @@
   position: relative;
   color: white;
   padding: 10vh 8vw 0 8vw;
+  @media only screen and (max-width: 650px) {
+    font-size: .85rem;
+  }
 }
 
 .contactInfoWrapper {
   display: flex;
   justify-content: space-between;
   padding: 3vh 0;
+  @media only screen and (max-width: 650px) {
+    display: block;
+    margin: 0 auto
+  }
 }
 
 .pictureMapWrapper {
@@ -21,6 +28,12 @@
   border: 1px solid #717171;
   display: inline-block;
   float: right;
+  @media only screen and (max-width: 650px) {
+    display: block;
+    width: 84vw;
+    height: auto;
+    margin: 5px auto;
+  }
 }
 
 .map {
@@ -29,6 +42,12 @@
   border-radius: 3px;
   border: 1px solid #717171;
   display: inline-block;
+  @media only screen and (max-width: 650px) {
+    display: block;
+    width: 84vw;
+    height: 54vw;
+    margin: 5px auto;
+  }
 }
 
 .googleMarker {
@@ -42,6 +61,15 @@
   width: 33vw;
   h3, p:not(:last-child) {
     margin-bottom: 12px;
+  }
+  @media only screen and (max-width: 650px) {
+    width: 90vw;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 20px;
+    h3, p:not(:last-child) {
+      margin-bottom: 2px;
+    }
   }
 }
 
@@ -75,5 +103,8 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+  @media only screen and (max-width: 650px) {
+    padding-top: 17px;
   }
 }
