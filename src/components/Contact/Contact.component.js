@@ -67,15 +67,15 @@ const Contact = ({ contact }) =>
         alt="warsztat2"
         className={styles.buildingPhoto}
       />
-      <div className={styles.links}>
-        <i className="fa fa-google-plus" aria-hidden="true"></i>
-        <a
-          href="https://dobrymechanik.pl/mechanicy/wroclaw/auto-maxi-sp-j-w-pomykala-j-grabczyk-rozwadowski.html"
-          target="_blank"
-        >
-          DobryMechanik.pl
-        </a>
-      </div>
+    </div>
+    <div className={styles.links}>
+      <i className="fa fa-google-plus" aria-hidden="true"></i>
+      <a
+        href="https://dobrymechanik.pl/mechanicy/wroclaw/auto-maxi-sp-j-w-pomykala-j-grabczyk-rozwadowski.html"
+        target="_blank"
+      >
+        DobryMechanik.pl
+      </a>
     </div>
   </section>
 

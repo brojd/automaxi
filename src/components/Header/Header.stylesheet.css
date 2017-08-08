@@ -3,7 +3,7 @@
 /* JUMBOTRON */
 .Header {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   background: linear-gradient(to bottom right, #ffffff 9%, #080b10 123%);
   color: antiquewhite;
   z-index: 5; }

@@ -16,11 +16,16 @@
       margin: 0 auto; } }
 
 .pictureMapWrapper {
-  padding: 3vh 0; }
+  padding: 3vh 0;
+  display: flex;
+  justify-content: space-between; }
+  @media only screen and (max-width: 650px) {
+    .pictureMapWrapper {
+      display: block; } }
 
 .buildingPhoto {
-  width: 31vw;
-  height: 23vw;
+  width: 23vw;
+  height: 21vw;
   border-radius: 3px;
   border: 1px solid #717171;
   display: inline-block;
@@ -33,8 +38,8 @@
       margin: 5px auto; } }
 
 .map {
-  width: 31vw;
-  height: 23vw;
+  width: 23vw;
+  height: 21vw;
   border-radius: 3px;
   border: 1px solid #717171;
   display: inline-block; }
