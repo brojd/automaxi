@@ -4,10 +4,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 650px) {
+    display: block;
+  }
 }
 
 .contentWrapper {
   padding: 0 7vw;
+  @media screen and (max-width: 650px) {
+    min-width: 90vw;
+    margin: 0 auto;
+    padding: 3vh 0;
+  }
 }
 
 .image {
@@ -15,12 +23,19 @@
   height: auto;
   @media screen and (max-width: 650px) {
     display: block;
+    min-width: 100vw;
+    height: auto;
+    float: none !important;
   }
 }
 
 .heading {
   text-align: center;
   @include heading(2rem);
+  @media only screen and (max-width: 650px) {
+    @include heading(1.4rem);
+    text-align: center;
+  }
 }
 
 .underlining {
@@ -30,11 +45,17 @@
 }
 
 .underlining--primary-color {
-  border-bottom: 11px solid $logo-primary-color
+  border-bottom: 11px solid $logo-primary-color;
+  @media only screen and (max-width: 950px) {
+    border: 6px solid $logo-primary-color;
+  }
 }
 
 .underlining--secondary-color {
-  border-bottom: 11px solid $logo-secondary-color
+  border-bottom: 11px solid $logo-secondary-color;
+  @media only screen and (max-width: 950px) {
+    border: 6px solid $logo-secondary-color;
+  }
 }
 
 .text {
@@ -46,6 +67,7 @@
   }
   @media screen and (max-width: 650px) {
     display: block;
+    font-size: .85rem;
   }
 }
 
@@ -61,4 +83,7 @@
   height: auto;
   margin-right: 10px;
   display: inline-block;
+  @media only screen and (max-width: 650px) {
+    width: 10px;
+  }
 }

@@ -12,7 +12,7 @@ const ServiceDetails = props => {
          alt="service-details"
          className={styles.image}
          style={{
-           float: props.isBright ? 'left' : 'right',
+           order: props.isBright ? 0 : 1,
            width: `${props.imageWidthInVW}vw`
          }}
     />;
@@ -24,7 +24,7 @@ const ServiceDetails = props => {
                color: props.isBright ? '#333333' : '#fff'
              }}
     >
-      {props.isBright && mainImg}
+      {mainImg}
       <div className={styles.contentWrapper}
            style={{ width: `${100 - props.imageWidthInVW}vw` }}
       >
@@ -41,7 +41,6 @@ const ServiceDetails = props => {
         />
         {props.children}
       </div>
-      {!props.isBright && mainImg}
     </section>
   )
 }

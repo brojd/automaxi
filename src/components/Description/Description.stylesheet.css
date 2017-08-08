@@ -44,7 +44,6 @@
   margin-bottom: 10vh; }
 
 .text {
-  text-align: center;
   word-spacing: 1px;
   line-height: 1.3rem; }
   @media only screen and (max-width: 650px) {
@@ -67,6 +66,6 @@
   border: 11px solid #fecc00; }
   @media only screen and (max-width: 950px) {
     .underlining-yellow {
-      border: 6px solid #1b398f; } }
+      border: 6px solid #fecc00; } }
 
 /*# sourceMappingURL=Description.stylesheet.css.map */
