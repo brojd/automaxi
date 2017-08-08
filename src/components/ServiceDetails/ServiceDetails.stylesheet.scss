@@ -47,14 +47,14 @@
 .underlining--primary-color {
   border-bottom: 11px solid $logo-primary-color;
   @media only screen and (max-width: 950px) {
-    border: 6px solid $logo-primary-color;
+    border-bottom: 8px solid $logo-primary-color;
   }
 }
 
 .underlining--secondary-color {
   border-bottom: 11px solid $logo-secondary-color;
   @media only screen and (max-width: 950px) {
-    border: 6px solid $logo-secondary-color;
+    border-bottom: 8px solid $logo-secondary-color;
   }
 }
 

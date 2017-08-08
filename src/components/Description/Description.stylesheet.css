@@ -57,15 +57,15 @@
   color: #333333; }
 
 .underlining-blue {
-  border: 11px solid #1b398f; }
+  border-bottom: 11px solid #1b398f; }
   @media only screen and (max-width: 950px) {
     .underlining-blue {
-      border: 6px solid #1b398f; } }
+      border-bottom: 8px solid #1b398f; } }
 
 .underlining-yellow {
-  border: 11px solid #fecc00; }
+  border-bottom: 11px solid #fecc00; }
   @media only screen and (max-width: 950px) {
     .underlining-yellow {
-      border: 6px solid #fecc00; } }
+      border-bottom: 8px solid #fecc00; } }
 
 /*# sourceMappingURL=Description.stylesheet.css.map */

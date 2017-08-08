@@ -52,13 +52,13 @@
   border-bottom: 11px solid #1b398f; }
   @media only screen and (max-width: 950px) {
     .underlining--primary-color {
-      border: 6px solid #1b398f; } }
+      border-bottom: 8px solid #1b398f; } }
 
 .underlining--secondary-color {
   border-bottom: 11px solid #fecc00; }
   @media only screen and (max-width: 950px) {
     .underlining--secondary-color {
-      border: 6px solid #fecc00; } }
+      border-bottom: 8px solid #fecc00; } }
 
 .text {
   word-spacing: 1px;
