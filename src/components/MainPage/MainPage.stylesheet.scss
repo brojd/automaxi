@@ -4,6 +4,9 @@
 .lastSectionsWrapper {
   position: relative;
   height: 220vh;
+  @media only screen and (max-width: 650px) {
+    background-attachment: scroll !important;
+  }
 }
 
 .descriptionBackground {
