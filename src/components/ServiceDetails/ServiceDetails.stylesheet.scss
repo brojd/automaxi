@@ -13,6 +13,9 @@
 .image {
   display: inline-block;
   height: auto;
+  @media screen and (max-width: 650px) {
+    display: block;
+  }
 }
 
 .heading {
@@ -40,6 +43,9 @@
   display: inline-block;
   a {
     color: white;
+  }
+  @media screen and (max-width: 650px) {
+    display: block;
   }
 }
 

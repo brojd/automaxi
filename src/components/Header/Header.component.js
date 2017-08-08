@@ -33,7 +33,7 @@ class Header extends Component {
             {[styles['arrow--up']]: this.state.headerVisible}
           )}
           onMouseOver={() => !this.state.headerVisible && this.setHeaderVisibility(true)}
-          onClick={() => this.state.headerVisible && this.setHeaderVisibility(false)}
+          onClick={() => this.state.headerVisible ? this.setHeaderVisibility(false) : this.setHeaderVisibility(true)}
         >
           &#8249;
         </div>

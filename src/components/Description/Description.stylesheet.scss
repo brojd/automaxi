@@ -19,11 +19,18 @@
 
 .contentWrapper {
   width: 60vw;
+  @media only screen and (max-width: 650px) {
+    width: 90vw;
+  }
 }
 
 .heading {
   text-align: center;
   @include heading(2rem);
+  @media only screen and (max-width: 650px) {
+    @include heading(1.4rem);
+    text-align: center;
+  }
 }
 
 .underlining {
@@ -35,6 +42,9 @@
 .text {
   text-align: center;
   @include text();
+  @media only screen and (max-width: 650px) {
+    font-size: .85rem;
+  }
 }
 
 .color-white {
@@ -48,13 +58,13 @@
 .underlining-blue {
   border: 11px solid $logo-primary-color;
   @media only screen and (max-width: 950px) {
-    border: 9px solid $logo-primary-color;
+    border: 6px solid $logo-primary-color;
   }
 }
 
 .underlining-yellow {
   border: 11px solid $logo-secondary-color;
   @media only screen and (max-width: 950px) {
-    border: 9px solid $logo-primary-color;
+    border: 6px solid $logo-primary-color;
   }
 }

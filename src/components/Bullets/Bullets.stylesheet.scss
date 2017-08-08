@@ -3,6 +3,12 @@
   &:not(:last-child) {
     margin-bottom: 10px;
   }
+  @media only screen and (max-width: 650px) {
+    font-size: .85rem;
+    &:not(:last-child) {
+      margin-bottom: 3px;
+    }
+  }
 }
 
 .checkbox {

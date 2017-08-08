@@ -10,7 +10,7 @@ class Nav extends Component {
   constructor() {
     super();
     this.state = {
-      menuVisible: true
+      menuVisible: document.documentElement.clientWidth > 950
     }
   }
 

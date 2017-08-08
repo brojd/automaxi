@@ -50,6 +50,8 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif; }
+  font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  width: 100vw;
+  overflow-x: hidden; }
 
 /*# sourceMappingURL=index.css.map */

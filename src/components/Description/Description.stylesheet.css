@@ -18,6 +18,9 @@
 
 .contentWrapper {
   width: 60vw; }
+  @media only screen and (max-width: 650px) {
+    .contentWrapper {
+      width: 90vw; } }
 
 .heading {
   text-align: center;
@@ -26,6 +29,14 @@
   font-weight: 200;
   font-size: 2rem;
   text-transform: uppercase; }
+  @media only screen and (max-width: 650px) {
+    .heading {
+      margin-bottom: 3vh;
+      font-family: Impact, Haettenschweiler, Franklin Gothic Bold, Charcoal, Helvetica Inserat, Bitstream Vera Sans Bold, Arial Black, sans serif;
+      font-weight: 200;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      text-align: center; } }
 
 .underlining {
   width: 80px;
@@ -36,6 +47,9 @@
   text-align: center;
   word-spacing: 1px;
   line-height: 1.3rem; }
+  @media only screen and (max-width: 650px) {
+    .text {
+      font-size: .85rem; } }
 
 .color-white {
   color: white; }
@@ -47,12 +61,12 @@
   border: 11px solid #1b398f; }
   @media only screen and (max-width: 950px) {
     .underlining-blue {
-      border: 9px solid #1b398f; } }
+      border: 6px solid #1b398f; } }
 
 .underlining-yellow {
   border: 11px solid #fecc00; }
   @media only screen and (max-width: 950px) {
     .underlining-yellow {
-      border: 9px solid #1b398f; } }
+      border: 6px solid #1b398f; } }
 
 /*# sourceMappingURL=Description.stylesheet.css.map */

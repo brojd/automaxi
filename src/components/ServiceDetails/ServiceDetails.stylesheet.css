@@ -12,6 +12,9 @@
 .image {
   display: inline-block;
   height: auto; }
+  @media screen and (max-width: 650px) {
+    .image {
+      display: block; } }
 
 .heading {
   text-align: center;
@@ -39,6 +42,9 @@
   display: inline-block; }
   .text a {
     color: white; }
+  @media screen and (max-width: 650px) {
+    .text {
+      display: block; } }
 
 .listItem {
   margin-left: 10px; }

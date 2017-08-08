@@ -2,7 +2,7 @@
 
 .Header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   background: linear-gradient(to bottom right, #ffffff 9%, #080b10 123%);
   color: antiquewhite;
   z-index: 5;
@@ -31,6 +31,14 @@
   &--up {
     transform: rotate(90deg);
   }
+  @media only screen and (max-width: 650px) {
+    width: 21px;
+    height: 28px;
+    font-size: 3rem;
+    right: 11px;
+    line-height: 20px;
+    top: 86px;
+  }
 }
 
 .contentWrapper {
@@ -46,6 +54,10 @@
   height: auto;
   margin-left: $logo-margin-left;
   cursor: pointer;
+  @media only screen and (max-width: 650px) {
+    width: 150px;
+    margin-left: 10px;
+  }
 }
 
 .hideHeader {
