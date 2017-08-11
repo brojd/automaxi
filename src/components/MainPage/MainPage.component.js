@@ -15,7 +15,7 @@ import { getDescription, getSummary, getCooperation1, getCooperation2 } from '..
 import styles from './MainPage.stylesheet.css';
 
 const MainPage = ({ description, summary, cooperation1, cooperation2 }) =>
-  <section>
+  <section className={styles.MainPage}>
     <ClientLogos logoHeight={40} />
     <Element name="start">
       <Jumbotron />

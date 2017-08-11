@@ -29,7 +29,7 @@
 
 .buildingPhoto {
   width: 23vw;
-  height: 21vw;
+  height: 19vw;
   border-radius: 3px;
   border: 1px solid #717171;
   display: inline-block;
@@ -44,7 +44,7 @@
 
 .map {
   width: 23vw;
-  height: 21vw;
+  height: 19vw;
   border-radius: 3px;
   border: 1px solid #717171;
   display: inline-block;
@@ -111,6 +111,6 @@
     }
   }
   @media only screen and (max-width: 650px) {
-    padding-top: 17px;
+    padding: 17px 0;
   }
 }

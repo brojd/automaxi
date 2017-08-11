@@ -15,8 +15,11 @@
   @media screen and (max-width: 650px) {
     .contentWrapper {
       min-width: 90vw;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       margin: 0 auto;
-      padding: 3vh 0; } }
+      min-height: 90vh; } }
 
 .image {
   display: inline-block;

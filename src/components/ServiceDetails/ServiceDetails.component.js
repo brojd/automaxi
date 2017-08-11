@@ -28,18 +28,20 @@ const ServiceDetails = props => {
       <div className={styles.contentWrapper}
            style={{ width: `${100 - props.imageWidthInVW}vw` }}
       >
-        <h3 className={styles.heading}>{props.heading}</h3>
-        <hr className={
-          `${styles.underlining} ${props.isBright ?
-            styles['underlining--primary-color']
-            : styles['underlining--secondary-color']}`
-          } />
-        <span className={styles.text}><ReactMarkdown source={props.text || ''} /></span>
-        <Bullets
-          isBright={props.isBright}
-          bulletList={props.bulletList}
-        />
-        {props.children}
+        <div>
+          <h3 className={styles.heading}>{props.heading}</h3>
+          <hr className={
+            `${styles.underlining} ${props.isBright ?
+              styles['underlining--primary-color']
+              : styles['underlining--secondary-color']}`
+            } />
+          <span className={styles.text}><ReactMarkdown source={props.text || ''} /></span>
+          <Bullets
+            isBright={props.isBright}
+            bulletList={props.bulletList}
+          />
+          {props.children}
+        </div>
       </div>
     </section>
   )

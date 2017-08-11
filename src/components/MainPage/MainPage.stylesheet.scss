@@ -1,4 +1,5 @@
 .MainPage {
+  padding-bottom: 20px;
 }
 
 .lastSectionsWrapper {
@@ -6,6 +7,9 @@
   height: 220vh;
   @media only screen and (max-width: 650px) {
     background-attachment: scroll !important;
+  }
+  a {
+    color: white;
   }
 }
 
@@ -18,10 +22,10 @@
 }
 
 .contactBackground {
-  background: #101010;
+  background: #887010;
+  opacity: 0.90;
   height: 50%;
   width: 100%;
   position: absolute;
   top: 110vh;
-  opacity: 0.95;
 }
