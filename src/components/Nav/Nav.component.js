@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
 import { Link, scrollSpy } from 'react-scroll';
+import cn from 'classnames'
 import styles from './Nav.stylesheet.css';
 import { headerDict } from '../../static_data/dictionary';
 
 const navDict = headerDict.nav
 
 class Nav extends Component {
+  constructor() {
+    super();
+    this.state = {
+      menuVisible: document.documentElement.clientWidth > 950
+    }
+  }
 
   componentDidMount() {
     scrollSpy.update();
@@ -14,55 +21,76 @@ class Nav extends Component {
   render() {
     return (
       <nav className={styles.Nav}>
-        <Link
-          spy={true}
-          smooth={true}
-          to="start"
-          activeClass={styles['listItem--active']}
-          className={styles.listItem}
+        <div className={cn(
+          styles.linksWrapper,
+          { [styles.expandNav]: this.state.menuVisible },
+          { [styles.collapseNav]: !this.state.menuVisible })}
         >
-          {navDict.start}
-        </Link>
-        <Link
-          spy={true}
-          smooth={true}
-          offset={-5}
-          to="about-us"
-          activeClass={styles['listItem--active']}
-          className={styles.listItem}
+          <Link
+            spy={true}
+            smooth={true}
+            offset={-5}
+            to="about-us"
+            activeClass={styles['listItem--active']}
+            className={styles.listItem}
+          >
+            {navDict.about}
+          </Link>
+          <Link
+            spy={true}
+            smooth={true}
+            offset={10}
+            to="offer"
+            activeClass={styles['listItem--active']}
+            className={styles.listItem}
+          >
+            {navDict.offer}
+          </Link>
+          <Link
+            spy={true}
+            smooth={true}
+            offset={15}
+            to="cooperation"
+            activeClass={styles['listItem--active']}
+            className={styles.listItem}
+          >
+            {navDict.cooperation}
+          </Link>
+          <Link
+            spy={true}
+            smooth={true}
+            to="jobs"
+            offset={-85}
+            activeClass={styles['listItem--active']}
+            className={styles.listItem}
+          >
+            {navDict.jobs}
+          </Link>
+          <Link
+            spy={true}
+            smooth={true}
+            to="contact"
+            offset={-15}
+            activeClass={styles['listItem--active']}
+            className={styles.listItem}
+          >
+            {navDict.contact}
+          </Link>
+        </div>
+        <button
+          type="button"
+          onClick={() => this.setState({ menuVisible: !this.state.menuVisible })}
+          className={styles.toggleMenuButton}
         >
-          {navDict.about}
-        </Link>
-        <Link
-          spy={true}
-          smooth={true}
-          offset={15}
-          to="offer"
-          activeClass={styles['listItem--active']}
-          className={styles.listItem}
-        >
-          {navDict.offer}
-        </Link>
-        <Link
-          spy={true}
-          smooth={true}
-          offset={15}
-          to="cooperation"
-          activeClass={styles['listItem--active']}
-          className={styles.listItem}
-        >
-          {navDict.cooperation}
-        </Link>
-        <Link
-          spy={true}
-          smooth={true}
-          to="contact"
-          offset={-15}
-          activeClass={styles['listItem--active']}
-          className={styles.listItem}
-        >
-          {navDict.contact}
-        </Link>
+          {
+            document.documentElement.clientWidth < 950 ?
+                <i
+                  className={cn("fa", this.state.menuVisible ?  "fa-angle-up" : "fa-bars")}
+                  aria-hidden="true"
+                ></i>
+              : null
+          }
+        </button>
       </nav>
     )
   }

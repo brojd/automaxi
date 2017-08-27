@@ -21,6 +21,7 @@ const initialState = {
     },
     services: {
       heading: '',
+      list: [],
       text: '',
       services1: {
         heading: '',
@@ -50,7 +51,11 @@ const initialState = {
     },
     cooperation1: {
       heading: '',
-      text: ''
+      text: '',
+      text2: '',
+      text3: '',
+      text4: '',
+      text5: ''
     },
     cooperation2: {
       heading: '',
@@ -94,6 +99,7 @@ export const getMainData = () => {
         },
         services: {
           heading: data.data.fields.servicesHeading,
+          list: data.data.fields.servicesList,
           text: data.data.fields.servicesText,
           services1: {
             heading: data.data.fields.services1Heading,
@@ -123,7 +129,11 @@ export const getMainData = () => {
         },
         cooperation1: {
           heading: data.data.fields.cooperation1Heading,
-          text: data.data.fields.cooperation1Text
+          text: data.data.fields.cooperation1Text,
+          text2: data.data.fields.cooperation1Text2,
+          text3: data.data.fields.cooperation1Text3,
+          text4: data.data.fields.cooperation1Text4,
+          text5: data.data.fields.cooperation1Text5
         },
         cooperation2: {
           heading: data.data.fields.cooperation2Heading,
@@ -138,6 +148,7 @@ export const getMainData = () => {
           openingHours: data.data.fields.openingHours,
           address1: data.data.fields.address1,
           address2: data.data.fields.address2,
+          address3: data.data.fields.address3,
         }
       }
       dispatch(turnOffLoading());

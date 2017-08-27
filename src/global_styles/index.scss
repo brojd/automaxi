@@ -3,10 +3,15 @@
 
 html {
   font-size: $root-font-size;
+  @media only screen and (max-width: 950px) {
+    font-size: 14px;
+  }
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
 }

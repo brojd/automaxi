@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown'
+import Bullets from '../Bullets/Bullets.component'
 import styles from './ServiceDetails.stylesheet.css';
-import checkboxBlue from './images/checkbox.png';
-import checkboxRed from './images/checkboxRed.png';
 import background from '../../common_images/background2.jpg';
 import backgroundDark from '../../common_images/backgroundDark2.jpg';
 
@@ -13,7 +12,7 @@ const ServiceDetails = props => {
          alt="service-details"
          className={styles.image}
          style={{
-           float: props.isBright ? 'left' : 'right',
+           order: props.isBright ? 0 : 1,
            width: `${props.imageWidthInVW}vw`
          }}
     />;
@@ -25,33 +24,25 @@ const ServiceDetails = props => {
                color: props.isBright ? '#333333' : '#fff'
              }}
     >
-      {props.isBright && mainImg}
+      {mainImg}
       <div className={styles.contentWrapper}
            style={{ width: `${100 - props.imageWidthInVW}vw` }}
       >
-        <h3 className={styles.heading}>{props.heading}</h3>
-        <hr className={
-          `${styles.underlining} ${props.isBright ?
-            styles['underlining--primary-color']
-            : styles['underlining--secondary-color']}`
-          } />
-        <span className={styles.text}><ReactMarkdown source={props.text} /></span>
-        <ul>
-          {props.bulletList && props.bulletList.map(
-            (item, index) =>
-              <li key={index}
-                  className={styles.listItem}
-              >
-                <img src={props.isBright ? checkboxBlue : checkboxRed}
-                     alt="checkbox"
-                     className={styles.checkbox}
-                />
-                <span>{item}</span>
-              </li>
-          )}
-        </ul>
+        <div>
+          <h3 className={styles.heading}>{props.heading}</h3>
+          <hr className={
+            `${styles.underlining} ${props.isBright ?
+              styles['underlining--primary-color']
+              : styles['underlining--secondary-color']}`
+            } />
+          <span className={styles.text}><ReactMarkdown source={props.text || ''} /></span>
+          <Bullets
+            isBright={props.isBright}
+            bulletList={props.bulletList}
+          />
+          {props.children}
+        </div>
       </div>
-      {!props.isBright && mainImg}
     </section>
   )
 }
@@ -62,8 +53,9 @@ ServiceDetails.propTypes = {
   heading: PropTypes.string,
   text: PropTypes.string,
   image: PropTypes.string,
-  imageWidthInVW: PropTypes.string,
-  bulletList: PropTypes.arrayOf(PropTypes.string)
+  imageWidthInVW: PropTypes.number,
+  bulletList: PropTypes.arrayOf(PropTypes.string),
+  children: PropTypes.element
 };
 
 export default ServiceDetails;

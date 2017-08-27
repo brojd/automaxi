@@ -2,29 +2,54 @@
   position: relative;
   color: white;
   padding: 10vh 8vw 0 8vw; }
+  @media only screen and (max-width: 650px) {
+    .Contact {
+      font-size: .85rem;
+      background-attachment: scroll !important; } }
 
 .contactInfoWrapper {
   display: flex;
   justify-content: space-between;
   padding: 3vh 0; }
+  @media only screen and (max-width: 650px) {
+    .contactInfoWrapper {
+      display: block;
+      margin: 0 auto; } }
 
 .pictureMapWrapper {
-  padding: 3vh 0; }
+  padding: 3vh 0;
+  display: flex;
+  justify-content: space-between; }
+  @media only screen and (max-width: 650px) {
+    .pictureMapWrapper {
+      display: block; } }
 
 .buildingPhoto {
-  width: 31vw;
-  height: 23vw;
+  width: 23vw;
+  height: 19vw;
   border-radius: 3px;
   border: 1px solid #717171;
   display: inline-block;
   float: right; }
+  @media only screen and (max-width: 650px) {
+    .buildingPhoto {
+      display: block;
+      width: 84vw;
+      height: auto;
+      margin: 5px auto; } }
 
 .map {
-  width: 31vw;
-  height: 23vw;
+  width: 23vw;
+  height: 19vw;
   border-radius: 3px;
   border: 1px solid #717171;
   display: inline-block; }
+  @media only screen and (max-width: 650px) {
+    .map {
+      display: block;
+      width: 84vw;
+      height: 54vw;
+      margin: 5px auto; } }
 
 .googleMarker {
   width: 80px;
@@ -32,16 +57,26 @@
   border-radius: 20px; }
 
 .contactInfo {
-  text-align: center; }
+  text-align: center;
+  width: 33vw; }
   .contactInfo h3, .contactInfo p:not(:last-child) {
     margin-bottom: 12px; }
+  @media only screen and (max-width: 650px) {
+    .contactInfo {
+      width: 90vw;
+      margin: 0 auto;
+      text-align: left;
+      margin-bottom: 20px; }
+      .contactInfo h3, .contactInfo p:not(:last-child) {
+        margin-bottom: 2px; } }
 
-.icons {
+.links {
   display: flex;
+  align-items: center;
   margin: 10vh auto 0 auto;
   width: 200px;
   justify-content: space-around; }
-  .icons i {
+  .links i {
     border: 2px solid #fff;
     width: 35px;
     height: 35px;
@@ -49,11 +84,20 @@
     position: relative;
     text-align: center;
     line-height: 35px; }
-    .icons i:before {
-      font-size: 15px; }
-    .icons i:hover {
+    .links i:before {
+      font-size: .94rem; }
+    .links i:hover {
       cursor: pointer;
       color: #969696;
       border-color: #969696; }
+  .links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px; }
+    .links a:hover {
+      text-decoration: underline; }
+  @media only screen and (max-width: 650px) {
+    .links {
+      padding: 17px 0; } }
 
 /*# sourceMappingURL=Contact.stylesheet.css.map */

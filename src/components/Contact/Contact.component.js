@@ -2,9 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import GoogleMapReact from 'google-map-react';
 import { connect } from 'react-redux';
+import ReactMarkdown from 'react-markdown'
+import backgroundDark from '../../common_images/backgroundDark2.jpg';
 import { getContact } from '../../selectors/main';
 import styles from './Contact.stylesheet.css';
 import building from './images/building.jpg';
+import building2 from './images/building2.jpg';
 import marker from './images/marker.png';
 import config from '../../../config.json';
 
@@ -16,12 +19,16 @@ const GoogleMarker = () =>
   />
 
 const Contact = ({ contact }) =>
-  <section className={styles.Contact}>
+  <section
+    className={styles.Contact}
+    style={{ background: `url(${backgroundDark}) center/cover fixed` }}
+  >
     <div className={styles.contactInfoWrapper}>
       <div className={styles.contactInfo}>
         <h3>Adres:</h3>
         <p>{contact.address1}</p>
         <p>{contact.address2}</p>
+        {contact.address3 && <ReactMarkdown source={contact.address3} />}
       </div>
       <div className={styles.contactInfo}>
         <h3>Godziny otwarcia:</h3>
@@ -55,11 +62,20 @@ const Contact = ({ contact }) =>
         alt="warsztat"
         className={styles.buildingPhoto}
       />
-      <div className={styles.icons}>
-        <i className="fa fa-facebook" aria-hidden="true"></i>
-        <i className="fa fa-google-plus" aria-hidden="true"></i>
-        <i className="fa fa-twitter" aria-hidden="true"></i>
-      </div>
+      <img
+        src={building2}
+        alt="warsztat2"
+        className={styles.buildingPhoto}
+      />
+    </div>
+    <div className={styles.links}>
+      <i className="fa fa-google-plus" aria-hidden="true"></i>
+      <a
+        href="https://dobrymechanik.pl/mechanicy/wroclaw/auto-maxi-sp-j-w-pomykala-j-grabczyk-rozwadowski.html"
+        target="_blank"
+      >
+        DobryMechanik.pl
+      </a>
     </div>
   </section>
 

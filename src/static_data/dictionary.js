@@ -4,7 +4,8 @@ export const headerDict = {
     about: 'O nas',
     offer: 'Oferta',
     cooperation: 'Współpraca',
-    contact: 'Kontakt'
+    contact: 'Kontakt',
+    jobs: 'Praca'
   },
   clientLogosText: 'Zaufali nam:'
 };

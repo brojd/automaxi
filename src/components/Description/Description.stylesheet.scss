@@ -1,12 +1,11 @@
 @import '../../global_styles/mixins';
 
 .Description {
-  height: 110vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  z-index: 0;
+  z-index: 1;
 }
 
 .background {
@@ -16,26 +15,38 @@
   left: 0;
   right: 0;
   z-index: -1;
+  @media only screen and (max-width: 650px) {
+    background-attachment: scroll !important;
+  }
 }
 
 .contentWrapper {
   width: 60vw;
+  @media only screen and (max-width: 650px) {
+    width: 90vw;
+  }
 }
 
 .heading {
   text-align: center;
   @include heading(2rem);
+  @media only screen and (max-width: 650px) {
+    @include heading(1.4rem);
+    text-align: center;
+  }
 }
 
 .underlining {
   width: 80px;
   border-bottom: none;
-  margin-bottom: 15vh;
+  margin-bottom: 10vh;
 }
 
 .text {
-  text-align: center;
   @include text();
+  @media only screen and (max-width: 650px) {
+    font-size: .85rem;
+  }
 }
 
 .color-white {
@@ -47,9 +58,15 @@
 }
 
 .underlining-blue {
-  border: 11px solid $logo-primary-color;
+  border-bottom: 11px solid $logo-primary-color;
+  @media only screen and (max-width: 950px) {
+    border-bottom: 8px solid $logo-primary-color;
+  }
 }
 
 .underlining-yellow {
-  border: 11px solid $logo-secondary-color;
+  border-bottom: 11px solid $logo-secondary-color;
+  @media only screen and (max-width: 950px) {
+    border-bottom: 8px solid $logo-secondary-color;
+  }
 }
