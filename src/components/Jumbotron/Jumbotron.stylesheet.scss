@@ -37,8 +37,8 @@
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background: $jumbotron-arrow-back-color;
   animation: bounce 5s infinite 2s;
@@ -53,17 +53,17 @@
 
 .arrow {
   position: absolute;
-  width: 45px;
-  top: -22px;
+  width: 36px;
+  top: -21px;
   transform: rotate(-90deg);
   font-family: Arial Narrow, Arial, sans-serif;
   font-weight: 200;
-  font-size: 84px;
+  font-size: 78px;
   @media only screen and (max-width: 650px) {
-    width: 51px;
+    width: 53px;
     line-height: 28px;
     height: 51px;
-    font-size: 64px;
+    font-size: 60px;
   }
 }
 
