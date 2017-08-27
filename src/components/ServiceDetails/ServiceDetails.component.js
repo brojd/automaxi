@@ -12,7 +12,7 @@ const ServiceDetails = props => {
          alt="service-details"
          className={styles.image}
          style={{
-           float: props.isBright ? 'left' : 'right',
+           order: props.isBright ? 0 : 1,
            width: `${props.imageWidthInVW}vw`
          }}
     />;
@@ -24,24 +24,25 @@ const ServiceDetails = props => {
                color: props.isBright ? '#333333' : '#fff'
              }}
     >
-      {props.isBright && mainImg}
+      {mainImg}
       <div className={styles.contentWrapper}
            style={{ width: `${100 - props.imageWidthInVW}vw` }}
       >
-        <h3 className={styles.heading}>{props.heading}</h3>
-        <hr className={
-          `${styles.underlining} ${props.isBright ?
-            styles['underlining--primary-color']
-            : styles['underlining--secondary-color']}`
-          } />
-        <span className={styles.text}><ReactMarkdown source={props.text || ''} /></span>
-        <Bullets
-          isBright={props.isBright}
-          bulletList={props.bulletList}
-        />
-        {props.children}
+        <div>
+          <h3 className={styles.heading}>{props.heading}</h3>
+          <hr className={
+            `${styles.underlining} ${props.isBright ?
+              styles['underlining--primary-color']
+              : styles['underlining--secondary-color']}`
+            } />
+          <span className={styles.text}><ReactMarkdown source={props.text || ''} /></span>
+          <Bullets
+            isBright={props.isBright}
+            bulletList={props.bulletList}
+          />
+          {props.children}
+        </div>
       </div>
-      {!props.isBright && mainImg}
     </section>
   )
 }

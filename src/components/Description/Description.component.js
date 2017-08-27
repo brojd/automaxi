@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Description.stylesheet.css';
 import ReactMarkdown from 'react-markdown'
 
-const Description = ({ backgroundImg, heading, text, isDark, children, height = '110vh' }) =>
+const Description = ({ backgroundImg, heading, text, isDark, children, height = '110vh', textCentered = true }) =>
   <div
     className={`${styles.Description} ${styles[isDark ? 'color-white' : 'color-dark']}`}
     style={{ height }}
@@ -20,7 +20,12 @@ const Description = ({ backgroundImg, heading, text, isDark, children, height = 
           </span>
       }
       {children}
-      <div className={styles.text}><ReactMarkdown source={text || ''} /></div>
+      <div
+        className={styles.text}
+        style={{ textAlign: textCentered ? 'center' : 'left' }}
+      >
+        <ReactMarkdown source={text || ''} />
+      </div>
     </div>
   </div>
 
@@ -29,7 +34,8 @@ Description.propTypes = {
   heading: PropTypes.string,
   text: PropTypes.string,
   isDark: PropTypes.bool,
-  children: PropTypes.element,
+  textCentered: PropTypes.bool,
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.arrayOf(PropTypes.element)]),
   height: PropTypes.string
 };
 

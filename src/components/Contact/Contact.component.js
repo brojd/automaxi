@@ -7,6 +7,7 @@ import backgroundDark from '../../common_images/backgroundDark2.jpg';
 import { getContact } from '../../selectors/main';
 import styles from './Contact.stylesheet.css';
 import building from './images/building.jpg';
+import building2 from './images/building2.jpg';
 import marker from './images/marker.png';
 import config from '../../../config.json';
 
@@ -61,15 +62,20 @@ const Contact = ({ contact }) =>
         alt="warsztat"
         className={styles.buildingPhoto}
       />
-      <div className={styles.links}>
-        <i className="fa fa-google-plus" aria-hidden="true"></i>
-        <a
-          href="https://dobrymechanik.pl/mechanicy/wroclaw/auto-maxi-sp-j-w-pomykala-j-grabczyk-rozwadowski.html"
-          target="_blank"
-        >
-          DobryMechanik.pl
-        </a>
-      </div>
+      <img
+        src={building2}
+        alt="warsztat2"
+        className={styles.buildingPhoto}
+      />
+    </div>
+    <div className={styles.links}>
+      <i className="fa fa-google-plus" aria-hidden="true"></i>
+      <a
+        href="https://dobrymechanik.pl/mechanicy/wroclaw/auto-maxi-sp-j-w-pomykala-j-grabczyk-rozwadowski.html"
+        target="_blank"
+      >
+        DobryMechanik.pl
+      </a>
     </div>
   </section>
 

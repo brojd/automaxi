@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 import { Element } from 'react-scroll';
+import ReactMarkdown from 'react-markdown'
 import Jumbotron from '../Jumbotron/Jumbotron.component';
 import Description from '../Description/Description.component';
 import Services from '../Services/Services.component';
@@ -14,7 +15,7 @@ import { getDescription, getSummary, getCooperation1, getCooperation2 } from '..
 import styles from './MainPage.stylesheet.css';
 
 const MainPage = ({ description, summary, cooperation1, cooperation2 }) =>
-  <section>
+  <section className={styles.MainPage}>
     <ClientLogos logoHeight={40} />
     <Element name="start">
       <Jumbotron />
@@ -45,13 +46,16 @@ const MainPage = ({ description, summary, cooperation1, cooperation2 }) =>
         <div className={styles.descriptionBackground}></div>
         <Description
           heading={cooperation1.heading}
-          text={cooperation1.text}
           isDark={true}
-        />
-        <Description
-          text={cooperation1.text2}
-          isDark={true}
-        />
+        >
+          <div style={{ textAlign: 'center' }}><ReactMarkdown  source={cooperation1.text} /></div>
+          <ReactMarkdown source={cooperation1.text2} />
+        </Description>
+        <Description isDark={true}>
+          <div style={{ textAlign: 'center' }}><ReactMarkdown source={cooperation1.text3} /></div>
+          <ReactMarkdown source={cooperation1.text4} />
+          <div style={{ textAlign: 'center' }}><ReactMarkdown source={cooperation1.text5} /></div>
+        </Description>
         <div className={styles.contactBackground}></div>
       </div>
     </Element>

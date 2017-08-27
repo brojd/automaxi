@@ -4,20 +4,42 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 650px) {
+    display: block;
+    background-attachment: scroll !important;
+  }
 }
 
 .contentWrapper {
   padding: 0 7vw;
+  @media screen and (max-width: 650px) {
+    min-width: 90vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    min-height: 90vh;
+  }
 }
 
 .image {
   display: inline-block;
   height: auto;
+  @media screen and (max-width: 650px) {
+    display: block;
+    min-width: 100vw;
+    height: auto;
+    float: none !important;
+  }
 }
 
 .heading {
   text-align: center;
   @include heading(2rem);
+  @media only screen and (max-width: 650px) {
+    @include heading(1.4rem);
+    text-align: center;
+  }
 }
 
 .underlining {
@@ -27,11 +49,17 @@
 }
 
 .underlining--primary-color {
-  border-bottom: 11px solid $logo-primary-color
+  border-bottom: 11px solid $logo-primary-color;
+  @media only screen and (max-width: 950px) {
+    border-bottom: 8px solid $logo-primary-color;
+  }
 }
 
 .underlining--secondary-color {
-  border-bottom: 11px solid $logo-secondary-color
+  border-bottom: 11px solid $logo-secondary-color;
+  @media only screen and (max-width: 950px) {
+    border-bottom: 8px solid $logo-secondary-color;
+  }
 }
 
 .text {
@@ -40,6 +68,10 @@
   display: inline-block;
   a {
     color: white;
+  }
+  @media screen and (max-width: 650px) {
+    display: block;
+    font-size: .85rem;
   }
 }
 
@@ -55,4 +87,7 @@
   height: auto;
   margin-right: 10px;
   display: inline-block;
+  @media only screen and (max-width: 650px) {
+    width: 10px;
+  }
 }

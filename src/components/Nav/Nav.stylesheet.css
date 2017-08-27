@@ -5,6 +5,16 @@
   height: 100%;
   line-height: 90px; }
 
+@media screen and (max-width: 950px) {
+  .linksWrapper {
+    position: absolute;
+    overflow: hidden;
+    top: 90px;
+    left: 0;
+    width: 100vw;
+    background: linear-gradient(to bottom right, #636363 9%, #6d7582 123%);
+    z-index: 5; } }
+
 .listItem {
   color: white;
   text-shadow: 1px 1px 0 #c3c3c3, -1px -1px #000000;
@@ -17,8 +27,45 @@
   cursor: pointer; }
   .listItem:hover:not(.listItem--active) {
     background: linear-gradient(to bottom right, #35373e, #4a567b); }
+  @media screen and (max-width: 950px) {
+    .listItem {
+      display: block;
+      height: 40px;
+      line-height: 40px;
+      width: 100vw; } }
 
 .listItem--active {
   background: linear-gradient(to bottom right, #272727 18%, #27396d 100%); }
+
+.toggleMenuButton {
+  position: absolute;
+  right: 22px;
+  top: 30px;
+  font-size: 1.6rem;
+  color: white;
+  background: none;
+  border: none; }
+  .toggleMenuButton:hover {
+    cursor: pointer;
+    color: #e1e1e1; }
+
+.expandNav {
+  animation: expandNav 1s;
+  animation-fill-mode: forwards; }
+
+.collapseNav {
+  animation: collapseNav 1s;
+  animation-fill-mode: forwards; }
+
+@keyframes expandNav {
+  from {
+    height: 0; }
+  to {
+    height: 200px; } }
+@keyframes collapseNav {
+  from {
+    height: 200px; }
+  to {
+    height: 0; } }
 
 /*# sourceMappingURL=Nav.stylesheet.css.map */

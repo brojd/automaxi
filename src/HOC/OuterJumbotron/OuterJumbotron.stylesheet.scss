@@ -1,7 +1,7 @@
 .OuterJumbotron {
   position: relative;
   overflow: hidden;
-  height: 105vh;
+  height: 100vh;
 }
 
 .secondBackground {
@@ -24,6 +24,9 @@
   right: 0;
   width: 100%;
   z-index: 1;
+  @media only screen and (max-width: 650px) {
+    background-attachment: scroll !important;
+  }
 }
 
 .enter {

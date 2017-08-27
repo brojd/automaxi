@@ -51,7 +51,11 @@ const initialState = {
     },
     cooperation1: {
       heading: '',
-      text: ''
+      text: '',
+      text2: '',
+      text3: '',
+      text4: '',
+      text5: ''
     },
     cooperation2: {
       heading: '',
@@ -126,7 +130,10 @@ export const getMainData = () => {
         cooperation1: {
           heading: data.data.fields.cooperation1Heading,
           text: data.data.fields.cooperation1Text,
-          text2: data.data.fields.cooperation1Text2
+          text2: data.data.fields.cooperation1Text2,
+          text3: data.data.fields.cooperation1Text3,
+          text4: data.data.fields.cooperation1Text4,
+          text5: data.data.fields.cooperation1Text5
         },
         cooperation2: {
           heading: data.data.fields.cooperation2Heading,

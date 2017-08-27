@@ -14,7 +14,7 @@
   height: 48px;
   line-height: 31px;
   text-align: center;
-  top: 82px;
+  top: 83px;
   color: #fecc00;
   right: 21px;
   background: #1b398f;
@@ -29,6 +29,14 @@
     transform: rotate(-90deg); }
   .arrow--up {
     transform: rotate(90deg); }
+  @media only screen and (max-width: 650px) {
+    .arrow {
+      width: 21px;
+      height: 28px;
+      font-size: 3rem;
+      right: 25px;
+      line-height: 20px;
+      top: 86px; } }
 
 .contentWrapper {
   height: 90px;
@@ -42,6 +50,10 @@
   height: auto;
   margin-left: 30px;
   cursor: pointer; }
+  @media only screen and (max-width: 650px) {
+    .logo {
+      width: 150px;
+      margin-left: 10px; } }
 
 .hideHeader {
   animation: moveUp 1.3s;
