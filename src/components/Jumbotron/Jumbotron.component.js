@@ -11,6 +11,7 @@ import jumbo3 from './images/jumbo3.jpeg';
 import jumbo4 from './images/jumbo4.jpg';
 import jumbo5 from './images/jumbo5.jpeg';
 import jumbo6 from './images/jumbo6.jpg';
+import jumbo7 from './images/jumbo7.jpg';
 
 class Jumbotron extends Component {
 
@@ -50,6 +51,6 @@ Jumbotron.propTypes = {
   jumbotron: PropTypes.object
 }
 
-const component = OuterJumbotron(Jumbotron, [jumbo1, jumbo2, jumbo3, jumbo4, jumbo5, jumbo6], 4200)
+const component = OuterJumbotron(Jumbotron, [jumbo1, jumbo2, jumbo3, jumbo4, jumbo5, jumbo6, jumbo7], 4200)
 
 export default connect(mapStateToProps)(component);
