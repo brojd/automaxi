@@ -9,7 +9,7 @@ const Description = ({ backgroundImg, heading, text, isDark, children, height = 
     style={{ height }}
   >
     <div className={styles.background}
-         style={{ background: `url(${backgroundImg}) center/cover fixed` }}
+         style={{ background: `url(${backgroundImg})` }}
     />
     <div className={styles.contentWrapper}>
       {
